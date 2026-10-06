@@ -1,0 +1,50 @@
+flowchart TB
+  accTitle: GP-A&#58; deep-kernel GP + Gaussian observation noise
+  accDescr: GP-A&#58; deep-kernel GP + Gaussian observation noise&#59; arrows follow patient context and measurements to predictive distributions and training objectives.
+  baseline["Patient baseline s&#58; entry covariates"]
+  class baseline input
+  past["Recorded causal prefix Events / measurements / updates"]
+  class past input
+  encoder["Common causal Transformer H₀ = E&#40;prefix&#41;"]
+  class encoder history
+  query["Query age t + feature ID d Arbitrary, irregular times"]
+  class query input
+  context["Fixed prefix + query context cₜd = &#91;s, H₀, t, e_d&#93;"]
+  class context context
+  prior["Multi-output GP prior f ∼ GP&#40;mθ, kθ&#41; Learned mean + PSD cross-feature kernel"]
+  class prior latent
+  observed["Available measurements D Irregular &#40;t, d, y&#41; records"]
+  class observed input
+  posterior["Exact Gaussian conditioning p&#40;f* &#124; D&#41;"]
+  class posterior latent
+  noise["Independent Gaussian noise εG ∼ N&#40;0, Σ&#41;"]
+  class noise private
+  observation["Predictive observation distribution y* = f* + εG"]
+  class observation output
+  output["Return clinical units Mean / quantiles / joint samples"]
+  class output output
+  loss["Train&#58; exact marginal NLL −log N&#40;y&#59; m, K + Σ&#41;"]
+  class loss loss
+  past --> encoder
+  baseline --> context
+  encoder --> context
+  query --> context
+  context --> prior
+  prior --> posterior
+  observed -->|Condition on known y| posterior
+  noise -->|Noise in conditioning covariance| posterior
+  posterior -->|Joint latent draws f*| observation
+  noise -->|Future noise| observation
+  observation -->|Undo training standardisation| output
+  prior -.-> loss
+  observed -.-> loss
+  noise -.-> loss
+classDef input fill:#EFF6FF,stroke:#3B82F6,color:#172554
+classDef history fill:#F3E8FF,stroke:#8B5CF6,color:#3B0764
+classDef flow fill:#FFF7ED,stroke:#F59E0B,color:#78350F
+classDef latent fill:#ECFEFF,stroke:#06B6D4,color:#164E63
+classDef context fill:#EEF2FF,stroke:#6366F1,color:#312E81
+classDef output fill:#ECFDF5,stroke:#10B981,color:#064E3B
+classDef loss fill:#FFF1F2,stroke:#F43F5E,color:#881337
+classDef private fill:#F1F5F9,stroke:#64748B,color:#334155
+%% portable-canonical-v2:eyJhY2Nlc3NpYmlsaXR5IjoiR1AtQTogZGVlcC1rZXJuZWwgR1AgKyBHYXVzc2lhbiBvYnNlcnZhdGlvbiBub2lzZTsgYXJyb3dzIGZvbGxvdyBwYXRpZW50IGNvbnRleHQgYW5kIG1lYXN1cmVtZW50cyB0byBwcmVkaWN0aXZlIGRpc3RyaWJ1dGlvbnMgYW5kIHRyYWluaW5nIG9iamVjdGl2ZXMuIiwiZGF0YSI6eyJkaXJlY3Rpb24iOiJUQiIsImVkZ2VzIjpbeyJmcm9tIjoicGFzdCIsInRvIjoiZW5jb2RlciJ9LHsiZnJvbSI6ImJhc2VsaW5lIiwidG8iOiJjb250ZXh0In0seyJmcm9tIjoiZW5jb2RlciIsInRvIjoiY29udGV4dCJ9LHsiZnJvbSI6InF1ZXJ5IiwidG8iOiJjb250ZXh0In0seyJmcm9tIjoiY29udGV4dCIsInRvIjoicHJpb3IifSx7ImZyb20iOiJwcmlvciIsInRvIjoicG9zdGVyaW9yIn0seyJmcm9tIjoib2JzZXJ2ZWQiLCJsYWJlbCI6IkNvbmRpdGlvbiBvbiBrbm93biB5IiwidG8iOiJwb3N0ZXJpb3IifSx7ImZyb20iOiJub2lzZSIsImxhYmVsIjoiTm9pc2UgaW4gY29uZGl0aW9uaW5nIGNvdmFyaWFuY2UiLCJ0byI6InBvc3RlcmlvciJ9LHsiZnJvbSI6InBvc3RlcmlvciIsImxhYmVsIjoiSm9pbnQgbGF0ZW50IGRyYXdzIGYqIiwidG8iOiJvYnNlcnZhdGlvbiJ9LHsiZnJvbSI6Im5vaXNlIiwibGFiZWwiOiJGdXR1cmUgbm9pc2UiLCJ0byI6Im9ic2VydmF0aW9uIn0seyJmcm9tIjoib2JzZXJ2YXRpb24iLCJsYWJlbCI6IlVuZG8gdHJhaW5pbmcgc3RhbmRhcmRpc2F0aW9uIiwidG8iOiJvdXRwdXQifSx7ImFycm93IjoiLS4tPiIsImZyb20iOiJwcmlvciIsInRvIjoibG9zcyJ9LHsiYXJyb3ciOiItLi0-IiwiZnJvbSI6Im9ic2VydmVkIiwidG8iOiJsb3NzIn0seyJhcnJvdyI6Ii0uLT4iLCJmcm9tIjoibm9pc2UiLCJ0byI6Imxvc3MifV0sIm5vZGVzIjpbeyJjbGFzcyI6ImlucHV0IiwiaWQiOiJiYXNlbGluZSIsImxhYmVsIjoiUGF0aWVudCBiYXNlbGluZVxuczogZW50cnkgY292YXJpYXRlcyJ9LHsiY2xhc3MiOiJpbnB1dCIsImlkIjoicGFzdCIsImxhYmVsIjoiUmVjb3JkZWQgY2F1c2FsIHByZWZpeFxuRXZlbnRzIC8gbWVhc3VyZW1lbnRzIC8gdXBkYXRlcyJ9LHsiY2xhc3MiOiJoaXN0b3J5IiwiaWQiOiJlbmNvZGVyIiwibGFiZWwiOiJDb21tb24gY2F1c2FsIFRyYW5zZm9ybWVyXG5I4oKAID0gRShwcmVmaXgpIn0seyJjbGFzcyI6ImlucHV0IiwiaWQiOiJxdWVyeSIsImxhYmVsIjoiUXVlcnkgYWdlIHQgKyBmZWF0dXJlIElEIGRcbkFyYml0cmFyeSwgaXJyZWd1bGFyIHRpbWVzIn0seyJjbGFzcyI6ImNvbnRleHQiLCJpZCI6ImNvbnRleHQiLCJsYWJlbCI6IkZpeGVkIHByZWZpeCArIHF1ZXJ5IGNvbnRleHRcbmPigpxkID0gW3MsIEjigoAsIHQsIGVfZF0ifSx7ImNsYXNzIjoibGF0ZW50IiwiaWQiOiJwcmlvciIsImxhYmVsIjoiTXVsdGktb3V0cHV0IEdQIHByaW9yXG5mIOKIvCBHUChtzrgsIGvOuClcbkxlYXJuZWQgbWVhbiArIFBTRCBjcm9zcy1mZWF0dXJlIGtlcm5lbCJ9LHsiY2xhc3MiOiJpbnB1dCIsImlkIjoib2JzZXJ2ZWQiLCJsYWJlbCI6IkF2YWlsYWJsZSBtZWFzdXJlbWVudHMgRFxuSXJyZWd1bGFyICh0LCBkLCB5KSByZWNvcmRzIn0seyJjbGFzcyI6ImxhdGVudCIsImlkIjoicG9zdGVyaW9yIiwibGFiZWwiOiJFeGFjdCBHYXVzc2lhbiBjb25kaXRpb25pbmdcbnAoZiogfCBEKSJ9LHsiY2xhc3MiOiJwcml2YXRlIiwiaWQiOiJub2lzZSIsImxhYmVsIjoiSW5kZXBlbmRlbnQgR2F1c3NpYW4gbm9pc2Vcbs61RyDiiLwgTigwLCDOoykifSx7ImNsYXNzIjoib3V0cHV0IiwiaWQiOiJvYnNlcnZhdGlvbiIsImxhYmVsIjoiUHJlZGljdGl2ZSBvYnNlcnZhdGlvbiBkaXN0cmlidXRpb25cbnkqID0gZiogKyDOtUcifSx7ImNsYXNzIjoib3V0cHV0IiwiaWQiOiJvdXRwdXQiLCJsYWJlbCI6IlJldHVybiBjbGluaWNhbCB1bml0c1xuTWVhbiAvIHF1YW50aWxlcyAvIGpvaW50IHNhbXBsZXMifSx7ImNsYXNzIjoibG9zcyIsImlkIjoibG9zcyIsImxhYmVsIjoiVHJhaW46IGV4YWN0IG1hcmdpbmFsIE5MTFxu4oiSbG9nIE4oeTsgbSwgSyArIM6jKSJ9XX0sImRlc2NyaXB0aW9uIjpudWxsLCJpZCI6ImdwX2EiLCJraW5kIjoiZmxvd2NoYXJ0Iiwic291cmNlU2hhMjU2IjoiZDFhYzlkZmI2NGNmZTU5OGJjYzllMTJlOTk1ZDgzNDBhZmRmMjU2OGYwZGRiYjk3MDA4ODNhZTUxY2YxOGNiNSIsInN0eWxlcyI6W3siZGVmaW5pdGlvbiI6ImZpbGw6I0VGRjZGRixzdHJva2U6IzNCODJGNixjb2xvcjojMTcyNTU0IiwibmFtZSI6ImlucHV0In0seyJkZWZpbml0aW9uIjoiZmlsbDojRjNFOEZGLHN0cm9rZTojOEI1Q0Y2LGNvbG9yOiMzQjA3NjQiLCJuYW1lIjoiaGlzdG9yeSJ9LHsiZGVmaW5pdGlvbiI6ImZpbGw6I0ZGRjdFRCxzdHJva2U6I0Y1OUUwQixjb2xvcjojNzgzNTBGIiwibmFtZSI6ImZsb3cifSx7ImRlZmluaXRpb24iOiJmaWxsOiNFQ0ZFRkYsc3Ryb2tlOiMwNkI2RDQsY29sb3I6IzE2NEU2MyIsIm5hbWUiOiJsYXRlbnQifSx7ImRlZmluaXRpb24iOiJmaWxsOiNFRUYyRkYsc3Ryb2tlOiM2MzY2RjEsY29sb3I6IzMxMkU4MSIsIm5hbWUiOiJjb250ZXh0In0seyJkZWZpbml0aW9uIjoiZmlsbDojRUNGREY1LHN0cm9rZTojMTBCOTgxLGNvbG9yOiMwNjRFM0IiLCJuYW1lIjoib3V0cHV0In0seyJkZWZpbml0aW9uIjoiZmlsbDojRkZGMUYyLHN0cm9rZTojRjQzRjVFLGNvbG9yOiM4ODEzMzciLCJuYW1lIjoibG9zcyJ9LHsiZGVmaW5pdGlvbiI6ImZpbGw6I0YxRjVGOSxzdHJva2U6IzY0NzQ4Qixjb2xvcjojMzM0MTU1IiwibmFtZSI6InByaXZhdGUifV0sInRpdGxlIjoiR1AtQTogZGVlcC1rZXJuZWwgR1AgKyBHYXVzc2lhbiBvYnNlcnZhdGlvbiBub2lzZSIsInZlcnNpb24iOjF9

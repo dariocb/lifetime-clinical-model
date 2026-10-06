@@ -1,0 +1,39 @@
+# Python caches, environments and packaging outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# Notebook checkpoints; keep executed tutorial notebooks and their outputs
+.ipynb_checkpoints/
+
+# Disposable benchmark copies, fitted checkpoints and generated datasets
+/tmp/
+/artifacts/
+/outputs/
+/notebook_outputs/
+/data/generated_synthetic/
+
+# Local credentials/configuration; templates may be committed
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log

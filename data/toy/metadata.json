@@ -1,0 +1,108 @@
+{
+  "config": {
+    "scenario": "combined",
+    "event_rate_per_year": 1.5,
+    "trajectory_strength": 1.0,
+    "covariate_strength": 1.0,
+    "history_strength": 1.0,
+    "residual_strength": 1.0,
+    "n_samples": 1300,
+    "mean_events": 12.0,
+    "count_distribution": "negative_binomial",
+    "count_dispersion": 3.0,
+    "seed": 42,
+    "study_end": "2018-10-31",
+    "age_range": [
+      18.0,
+      95.0
+    ],
+    "age_means": [
+      24.0,
+      50.0,
+      75.0
+    ],
+    "age_stds": [
+      4.0,
+      14.5,
+      2.5
+    ],
+    "age_weights": [
+      0.35,
+      0.35,
+      0.3
+    ],
+    "age_bin_edges": null,
+    "age_bin_weights": null,
+    "followup_years": [
+      1.0,
+      15.0
+    ],
+    "earliest_study_age": 16.0,
+    "pre_study_event_rate": 0.6,
+    "patient_rate_sigma": 0.5,
+    "timeline_beta": [
+      1.0,
+      1.0
+    ],
+    "event_type_weights": [
+      0.7,
+      0.2,
+      0.1
+    ],
+    "marital_weights": [
+      0.3,
+      0.08,
+      0.1,
+      0.06,
+      0.14,
+      0.22,
+      0.1
+    ],
+    "employment_weights": [
+      0.5,
+      0.43,
+      0.07
+    ],
+    "sex_weights": [
+      0.48,
+      0.52
+    ],
+    "ehr_missing_probability": 0.1,
+    "ehr_field_missing_probability": 0.35,
+    "include_measurements": true,
+    "measurement_probability": 0.5,
+    "measurement_schedule": "mixed",
+    "independent_measurement_rate": 0.5,
+    "include_dynamic_covariates": true,
+    "marital_update_rate": 0.2,
+    "employment_update_rate": 0.5,
+    "ehr_update_rate": 1.0
+  },
+  "synthetic": true,
+  "age_reference": "study_end",
+  "embedding": {},
+  "static_variables": [
+    "date_of_birth",
+    "sex"
+  ],
+  "dynamic_variables": [
+    "age",
+    "marital_status",
+    "employment",
+    "ehr_history",
+    "systolic_bp",
+    "glucose",
+    "creatinine"
+  ],
+  "patient_covariate_reference": "study entry, except age/censor metadata",
+  "subset": {
+    "source": "data/generated_synthetic",
+    "patient_count": 130,
+    "split_counts": {
+      "train": 100,
+      "validation": 20,
+      "test": 10
+    },
+    "selection": "Existing IDs retained, then existing full split order; no outcome-based selection."
+  }
+}

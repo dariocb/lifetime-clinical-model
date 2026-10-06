@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lifetime-clinical-models"
+version = "0.2.0"
+description = "Tutorial-first lifetime clinical modelling with TPPs, GPs, Transformers and normalizing flows"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "scipy>=1.10",
+  "torch>=2.0",
+]
+
+[project.optional-dependencies]
+notebooks = ["jupyterlab>=4", "ipykernel>=6", "nbformat>=5", "nbclient>=0.8"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lifetime_clinical*"]

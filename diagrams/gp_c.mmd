@@ -1,0 +1,58 @@
+flowchart TB
+  accTitle: GP-C&#58; latent physiology GP + independent flow residuals
+  accDescr: GP-C&#58; latent physiology GP + independent flow residuals&#59; arrows follow patient context and measurements to predictive distributions and training objectives.
+  baseline["Patient baseline s&#58; entry covariates"]
+  class baseline input
+  past["Recorded causal prefix Events / measurements / updates"]
+  class past input
+  encoder["Common causal Transformer H₀ = E&#40;prefix&#41;"]
+  class encoder history
+  query["Query age t + feature ID d Arbitrary, irregular times"]
+  class query input
+  context["Fixed prefix + query context cₜd = &#91;s, H₀, t, e_d&#93;"]
+  class context context
+  prior["Multi-output GP prior f ∼ GP&#40;mθ, kθ&#41; Learned mean + PSD cross-feature kernel"]
+  class prior latent
+  observed["Available measurements D Irregular &#40;t, d, y&#41; records"]
+  class observed input
+  recognition["Recognition Transformer + MLP Available &#40;t, d, y&#41; + s, H₀ Amortised diagonal q&#40;v&#41;"]
+  class recognition history
+  latent_future["Sparse variational physiology q&#40;f*&#41; from q&#40;v&#41; + GP prior Full covariance across query times/features"]
+  class latent_future latent
+  base_noise["Independent base draws zₜd ∼ N&#40;0, 1&#41;"]
+  class base_noise private
+  residual["Inverse residual flow εₜd = Tε⁻¹&#40;zₜd&#59; cₜd&#41; Network predicts flow parameters"]
+  class residual flow
+  observation["Add physiology + residual y* = f* + ε* Separate mean / variance contributions"]
+  class observation output
+  output["Return clinical units Joint physiology trajectories Full measured-value predictions"]
+  class output output
+  loss["Train&#58; minimise negative ELBO −E_q log pε&#40;y − f&#41; + KL&#40;q&#40;v&#41; ∥ p&#40;v&#41;&#41; Not an exact marginal NLL"]
+  class loss loss
+  past --> encoder
+  baseline --> context
+  encoder --> context
+  query --> context
+  context --> prior
+  observed -->|Known observations only| recognition
+  encoder --> recognition
+  baseline --> recognition
+  recognition -->|Inducing-variable posterior| latent_future
+  prior --> latent_future
+  base_noise --> residual
+  context -->|Condition residual parameters| residual
+  latent_future -->|Correlated draws f*| observation
+  residual -->|Independent across records, given context| observation
+  observation -->|Undo training standardisation| output
+  observed -.-> loss
+  latent_future -.-> loss
+  residual -.-> loss
+classDef input fill:#EFF6FF,stroke:#3B82F6,color:#172554
+classDef history fill:#F3E8FF,stroke:#8B5CF6,color:#3B0764
+classDef flow fill:#FFF7ED,stroke:#F59E0B,color:#78350F
+classDef latent fill:#ECFEFF,stroke:#06B6D4,color:#164E63
+classDef context fill:#EEF2FF,stroke:#6366F1,color:#312E81
+classDef output fill:#ECFDF5,stroke:#10B981,color:#064E3B
+classDef loss fill:#FFF1F2,stroke:#F43F5E,color:#881337
+classDef private fill:#F1F5F9,stroke:#64748B,color:#334155
+%% portable-canonical-v2:eyJhY2Nlc3NpYmlsaXR5IjoiR1AtQzogbGF0ZW50IHBoeXNpb2xvZ3kgR1AgKyBpbmRlcGVuZGVudCBmbG93IHJlc2lkdWFsczsgYXJyb3dzIGZvbGxvdyBwYXRpZW50IGNvbnRleHQgYW5kIG1lYXN1cmVtZW50cyB0byBwcmVkaWN0aXZlIGRpc3RyaWJ1dGlvbnMgYW5kIHRyYWluaW5nIG9iamVjdGl2ZXMuIiwiZGF0YSI6eyJkaXJlY3Rpb24iOiJUQiIsImVkZ2VzIjpbeyJmcm9tIjoicGFzdCIsInRvIjoiZW5jb2RlciJ9LHsiZnJvbSI6ImJhc2VsaW5lIiwidG8iOiJjb250ZXh0In0seyJmcm9tIjoiZW5jb2RlciIsInRvIjoiY29udGV4dCJ9LHsiZnJvbSI6InF1ZXJ5IiwidG8iOiJjb250ZXh0In0seyJmcm9tIjoiY29udGV4dCIsInRvIjoicHJpb3IifSx7ImZyb20iOiJvYnNlcnZlZCIsImxhYmVsIjoiS25vd24gb2JzZXJ2YXRpb25zIG9ubHkiLCJ0byI6InJlY29nbml0aW9uIn0seyJmcm9tIjoiZW5jb2RlciIsInRvIjoicmVjb2duaXRpb24ifSx7ImZyb20iOiJiYXNlbGluZSIsInRvIjoicmVjb2duaXRpb24ifSx7ImZyb20iOiJyZWNvZ25pdGlvbiIsImxhYmVsIjoiSW5kdWNpbmctdmFyaWFibGUgcG9zdGVyaW9yIiwidG8iOiJsYXRlbnRfZnV0dXJlIn0seyJmcm9tIjoicHJpb3IiLCJ0byI6ImxhdGVudF9mdXR1cmUifSx7ImZyb20iOiJiYXNlX25vaXNlIiwidG8iOiJyZXNpZHVhbCJ9LHsiZnJvbSI6ImNvbnRleHQiLCJsYWJlbCI6IkNvbmRpdGlvbiByZXNpZHVhbCBwYXJhbWV0ZXJzIiwidG8iOiJyZXNpZHVhbCJ9LHsiZnJvbSI6ImxhdGVudF9mdXR1cmUiLCJsYWJlbCI6IkNvcnJlbGF0ZWQgZHJhd3MgZioiLCJ0byI6Im9ic2VydmF0aW9uIn0seyJmcm9tIjoicmVzaWR1YWwiLCJsYWJlbCI6IkluZGVwZW5kZW50IGFjcm9zcyByZWNvcmRzLCBnaXZlbiBjb250ZXh0IiwidG8iOiJvYnNlcnZhdGlvbiJ9LHsiZnJvbSI6Im9ic2VydmF0aW9uIiwibGFiZWwiOiJVbmRvIHRyYWluaW5nIHN0YW5kYXJkaXNhdGlvbiIsInRvIjoib3V0cHV0In0seyJhcnJvdyI6Ii0uLT4iLCJmcm9tIjoib2JzZXJ2ZWQiLCJ0byI6Imxvc3MifSx7ImFycm93IjoiLS4tPiIsImZyb20iOiJsYXRlbnRfZnV0dXJlIiwidG8iOiJsb3NzIn0seyJhcnJvdyI6Ii0uLT4iLCJmcm9tIjoicmVzaWR1YWwiLCJ0byI6Imxvc3MifV0sIm5vZGVzIjpbeyJjbGFzcyI6ImlucHV0IiwiaWQiOiJiYXNlbGluZSIsImxhYmVsIjoiUGF0aWVudCBiYXNlbGluZVxuczogZW50cnkgY292YXJpYXRlcyJ9LHsiY2xhc3MiOiJpbnB1dCIsImlkIjoicGFzdCIsImxhYmVsIjoiUmVjb3JkZWQgY2F1c2FsIHByZWZpeFxuRXZlbnRzIC8gbWVhc3VyZW1lbnRzIC8gdXBkYXRlcyJ9LHsiY2xhc3MiOiJoaXN0b3J5IiwiaWQiOiJlbmNvZGVyIiwibGFiZWwiOiJDb21tb24gY2F1c2FsIFRyYW5zZm9ybWVyXG5I4oKAID0gRShwcmVmaXgpIn0seyJjbGFzcyI6ImlucHV0IiwiaWQiOiJxdWVyeSIsImxhYmVsIjoiUXVlcnkgYWdlIHQgKyBmZWF0dXJlIElEIGRcbkFyYml0cmFyeSwgaXJyZWd1bGFyIHRpbWVzIn0seyJjbGFzcyI6ImNvbnRleHQiLCJpZCI6ImNvbnRleHQiLCJsYWJlbCI6IkZpeGVkIHByZWZpeCArIHF1ZXJ5IGNvbnRleHRcbmPigpxkID0gW3MsIEjigoAsIHQsIGVfZF0ifSx7ImNsYXNzIjoibGF0ZW50IiwiaWQiOiJwcmlvciIsImxhYmVsIjoiTXVsdGktb3V0cHV0IEdQIHByaW9yXG5mIOKIvCBHUChtzrgsIGvOuClcbkxlYXJuZWQgbWVhbiArIFBTRCBjcm9zcy1mZWF0dXJlIGtlcm5lbCJ9LHsiY2xhc3MiOiJpbnB1dCIsImlkIjoib2JzZXJ2ZWQiLCJsYWJlbCI6IkF2YWlsYWJsZSBtZWFzdXJlbWVudHMgRFxuSXJyZWd1bGFyICh0LCBkLCB5KSByZWNvcmRzIn0seyJjbGFzcyI6Imhpc3RvcnkiLCJpZCI6InJlY29nbml0aW9uIiwibGFiZWwiOiJSZWNvZ25pdGlvbiBUcmFuc2Zvcm1lciArIE1MUFxuQXZhaWxhYmxlICh0LCBkLCB5KSArIHMsIEjigoBcbkFtb3J0aXNlZCBkaWFnb25hbCBxKHYpIn0seyJjbGFzcyI6ImxhdGVudCIsImlkIjoibGF0ZW50X2Z1dHVyZSIsImxhYmVsIjoiU3BhcnNlIHZhcmlhdGlvbmFsIHBoeXNpb2xvZ3lcbnEoZiopIGZyb20gcSh2KSArIEdQIHByaW9yXG5GdWxsIGNvdmFyaWFuY2UgYWNyb3NzIHF1ZXJ5IHRpbWVzL2ZlYXR1cmVzIn0seyJjbGFzcyI6InByaXZhdGUiLCJpZCI6ImJhc2Vfbm9pc2UiLCJsYWJlbCI6IkluZGVwZW5kZW50IGJhc2UgZHJhd3NcbnrigpxkIOKIvCBOKDAsIDEpIn0seyJjbGFzcyI6ImZsb3ciLCJpZCI6InJlc2lkdWFsIiwibGFiZWwiOiJJbnZlcnNlIHJlc2lkdWFsIGZsb3dcbs614oKcZCA9IFTOteKBu8K5KHrigpxkOyBj4oKcZClcbk5ldHdvcmsgcHJlZGljdHMgZmxvdyBwYXJhbWV0ZXJzIn0seyJjbGFzcyI6Im91dHB1dCIsImlkIjoib2JzZXJ2YXRpb24iLCJsYWJlbCI6IkFkZCBwaHlzaW9sb2d5ICsgcmVzaWR1YWxcbnkqID0gZiogKyDOtSpcblNlcGFyYXRlIG1lYW4gLyB2YXJpYW5jZSBjb250cmlidXRpb25zIn0seyJjbGFzcyI6Im91dHB1dCIsImlkIjoib3V0cHV0IiwibGFiZWwiOiJSZXR1cm4gY2xpbmljYWwgdW5pdHNcbkpvaW50IHBoeXNpb2xvZ3kgdHJhamVjdG9yaWVzXG5GdWxsIG1lYXN1cmVkLXZhbHVlIHByZWRpY3Rpb25zIn0seyJjbGFzcyI6Imxvc3MiLCJpZCI6Imxvc3MiLCJsYWJlbCI6IlRyYWluOiBtaW5pbWlzZSBuZWdhdGl2ZSBFTEJPXG7iiJJFX3EgbG9nIHDOtSh5IOKIkiBmKSArIEtMKHEodikg4oilIHAodikpXG5Ob3QgYW4gZXhhY3QgbWFyZ2luYWwgTkxMIn1dfSwiZGVzY3JpcHRpb24iOm51bGwsImlkIjoiZ3BfYyIsImtpbmQiOiJmbG93Y2hhcnQiLCJzb3VyY2VTaGEyNTYiOiI0N2JhMGRlMjI4Y2I1ZDY1NjA2YjBjZTQ2MjBhMjA4N2ZmZTdkZGUxMjAwZDY4YmQ0MDI4MGFiMDRlMzkxMjk5Iiwic3R5bGVzIjpbeyJkZWZpbml0aW9uIjoiZmlsbDojRUZGNkZGLHN0cm9rZTojM0I4MkY2LGNvbG9yOiMxNzI1NTQiLCJuYW1lIjoiaW5wdXQifSx7ImRlZmluaXRpb24iOiJmaWxsOiNGM0U4RkYsc3Ryb2tlOiM4QjVDRjYsY29sb3I6IzNCMDc2NCIsIm5hbWUiOiJoaXN0b3J5In0seyJkZWZpbml0aW9uIjoiZmlsbDojRkZGN0VELHN0cm9rZTojRjU5RTBCLGNvbG9yOiM3ODM1MEYiLCJuYW1lIjoiZmxvdyJ9LHsiZGVmaW5pdGlvbiI6ImZpbGw6I0VDRkVGRixzdHJva2U6IzA2QjZENCxjb2xvcjojMTY0RTYzIiwibmFtZSI6ImxhdGVudCJ9LHsiZGVmaW5pdGlvbiI6ImZpbGw6I0VFRjJGRixzdHJva2U6IzYzNjZGMSxjb2xvcjojMzEyRTgxIiwibmFtZSI6ImNvbnRleHQifSx7ImRlZmluaXRpb24iOiJmaWxsOiNFQ0ZERjUsc3Ryb2tlOiMxMEI5ODEsY29sb3I6IzA2NEUzQiIsIm5hbWUiOiJvdXRwdXQifSx7ImRlZmluaXRpb24iOiJmaWxsOiNGRkYxRjIsc3Ryb2tlOiNGNDNGNUUsY29sb3I6Izg4MTMzNyIsIm5hbWUiOiJsb3NzIn0seyJkZWZpbml0aW9uIjoiZmlsbDojRjFGNUY5LHN0cm9rZTojNjQ3NDhCLGNvbG9yOiMzMzQxNTUiLCJuYW1lIjoicHJpdmF0ZSJ9XSwidGl0bGUiOiJHUC1DOiBsYXRlbnQgcGh5c2lvbG9neSBHUCArIGluZGVwZW5kZW50IGZsb3cgcmVzaWR1YWxzIiwidmVyc2lvbiI6MX0

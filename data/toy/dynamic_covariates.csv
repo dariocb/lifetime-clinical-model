@@ -1,0 +1,1037 @@
+patient_id,recorded_at,recorded_age,variable,value,is_missing,source
+P000012,2014-03-26 12:18:11.843993184,36.35807069846267,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded. Family and social history only partially available.,False,baseline
+P000012,2014-03-26 12:18:11.843993184,36.35807069846267,employment,unemployed,False,baseline
+P000012,2014-03-26 12:18:11.843993184,36.35807069846267,marital_status,single,False,baseline
+P000012,2014-08-19 09:01:03.407431588,36.75743029324985,marital_status,unknown/missing,True,update
+P000012,2015-07-13 22:48:31.830670728,37.65703708744338,marital_status,widowed,False,update
+P000012,2016-01-25 22:19:21.210311720,38.19361138586234,employment,employed,False,update
+P000012,2016-12-10 12:56:16.383835216,39.06867102956696,marital_status,married,False,update
+P000012,2017-02-11 16:20:50.683186560,39.24154812806973,marital_status,divorced,False,update
+P000012,2017-07-11 14:58:48.294814592,39.65207819484006,employment,unemployed,False,update
+P000020,2013-01-06 17:44:37.838786336,64.1511853818704,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded.,False,baseline
+P000020,2013-01-06 17:44:37.838786336,64.1511853818704,employment,unknown/missing,True,baseline
+P000020,2013-01-06 17:44:37.838786336,64.1511853818704,marital_status,single,False,baseline
+P000020,2014-09-14 05:12:06.366821168,65.83630530498702,employment,unemployed,False,update
+P000020,2015-03-18 04:12:40.303752080,66.3427050972398,employment,employed,False,update
+P000020,2015-06-07 17:26:45.019857344,66.56598536575576,employment,unemployed,False,update
+P000020,2018-10-20 08:55:38.038147264,69.93537709339441,marital_status,divorced,False,update
+P000023,2010-12-04 18:48:02.594346304,67.71879877988046,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P000023,2010-12-04 18:48:02.594346304,67.71879877988046,employment,unemployed,False,baseline
+P000023,2010-12-04 18:48:02.594346304,67.71879877988046,marital_status,single,False,baseline
+P000023,2011-07-15 12:46:42.981855600,68.32866504286775,employment,employed,False,update
+P000023,2011-07-26 19:41:59.850728440,68.35957160408674,marital_status,unknown/missing,True,update
+P000023,2011-10-18 04:36:52.211819080,68.58783485210546,marital_status,separated,False,update
+P000023,2016-10-16 04:47:17.710600608,73.5845349611268,employment,unemployed,False,update
+P000023,2018-04-05 08:41:37.427180800,75.05249865155484,marital_status,partnered,False,update
+P000023,2018-05-23 00:18:30.710353920,75.18296160891438,employment,employed,False,update
+P000023,2018-10-03 04:34:37.685519936,75.54759020090152,employment,unemployed,False,update
+P000030,2014-05-03 20:23:29.292089168,69.5177851552992,ehr_history,Baseline psychiatric assessment: mood stable at intake. Family and social history only partially available.,False,baseline
+P000030,2014-05-03 20:23:29.292089168,69.5177851552992,employment,employed,False,baseline
+P000030,2014-05-03 20:23:29.292089168,69.5177851552992,marital_status,widowed,False,baseline
+P000039,2015-01-20 21:07:11.999999952,15.999999999999968,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000039,2015-01-20 21:07:11.999999952,15.999999999999968,employment,unknown/missing,True,baseline
+P000039,2015-01-20 21:07:11.999999952,15.999999999999968,marital_status,single,False,baseline
+P000039,2017-05-04 07:13:46.205111616,18.28456773027733,marital_status,divorced,False,update
+P000039,2018-02-16 04:27:02.619573424,19.07276794728377,employment,unemployed,False,update
+P000045,2017-01-19 22:41:32.997088616,76.30258121877829,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown. Family and social history only partially available.,False,baseline
+P000045,2017-01-19 22:41:32.997088616,76.30258121877829,employment,employed,False,baseline
+P000045,2017-01-19 22:41:32.997088616,76.30258121877829,marital_status,married,False,baseline
+P000047,2012-03-21 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000047,2012-03-21 21:07:11.999999968,15.999999999999968,employment,employed,False,baseline
+P000047,2012-03-21 21:07:11.999999968,15.999999999999968,marital_status,single,False,baseline
+P000047,2012-04-04 21:48:32.965165338,16.038409316754176,employment,unemployed,False,update
+P000047,2014-12-31 22:42:10.782595680,18.779156199324785,marital_status,partnered,False,update
+P000053,2014-06-27 01:13:51.889839856,72.27814751848781,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported. Prior care history is incompletely documented.,False,baseline
+P000053,2014-06-27 01:13:51.889839856,72.27814751848781,employment,employed,False,baseline
+P000053,2014-06-27 01:13:51.889839856,72.27814751848781,marital_status,partnered,False,baseline
+P000053,2014-11-12 00:38:27.712381292,72.6559113729482,employment,unknown/missing,True,update
+P000053,2014-12-04 05:34:25.820072846,72.71670805913296,employment,unemployed,False,update
+P000053,2016-07-17 21:47:10.556232336,74.33666060512535,employment,employed,False,update
+P000053,2017-03-09 15:13:57.848234640,74.97932112861324,employment,unemployed,False,update
+P000053,2017-04-05 22:48:29.159528256,75.05410881125425,marital_status,married,False,update
+P000060,2006-04-14 13:27:21.602324736,37.13029197504005,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000060,2006-04-14 13:27:21.602324736,37.13029197504005,employment,unemployed,False,baseline
+P000060,2006-04-14 13:27:21.602324736,37.13029197504005,marital_status,married,False,baseline
+P000060,2007-05-25 20:11:41.024955104,38.24265097037745,marital_status,single,False,update
+P000060,2007-08-08 01:12:02.347582792,38.44582716187489,employment,employed,False,update
+P000060,2008-01-30 02:43:04.079184248,38.9251339634824,employment,unknown/missing,True,update
+P000060,2008-07-03 06:40:23.239039272,39.34996077057881,employment,unemployed,False,update
+P000060,2009-06-18 10:57:30.311920384,40.30871708750325,employment,employed,False,update
+P000060,2012-10-29 19:50:48.705562944,43.6746187878209,employment,unemployed,False,update
+P000060,2013-07-03 02:54:05.225152256,44.34894869520832,employment,unknown/missing,True,update
+P000060,2013-10-11 00:27:48.217078272,44.62246126359344,employment,employed,False,update
+P000060,2014-04-30 09:17:23.330529408,45.17378748525931,employment,unemployed,False,update
+P000060,2014-09-20 07:09:35.651152960,45.56506520817195,employment,unknown/missing,True,update
+P000060,2017-05-28 01:08:01.433112320,48.25026451962508,employment,unemployed,False,update
+P000069,2009-03-25 14:40:29.423297728,24.81532530211717,ehr_history,,True,baseline
+P000069,2009-03-25 14:40:29.423297728,24.81532530211717,employment,unemployed,False,baseline
+P000069,2009-03-25 14:40:29.423297728,24.81532530211717,marital_status,single,False,baseline
+P000069,2010-08-14 14:13:01.568248624,26.2033919362126,marital_status,partnered,False,update
+P000069,2013-07-26 23:09:53.812227008,29.153138548115365,employment,employed,False,update
+P000069,2013-12-23 23:33:26.976935840,29.56386938057057,marital_status,married,False,update
+P000069,2014-05-13 06:47:45.291179712,29.94800211665496,marital_status,partnered,False,update
+P000069,2014-12-22 14:04:28.581638880,30.559385728432776,employment,unemployed,False,update
+P000069,2015-07-12 10:25:00.934249888,31.1120256777096,employment,employed,False,update
+P000069,2016-03-05 07:42:28.956341632,31.76060061048801,marital_status,married,False,update
+P000069,2017-07-10 08:37:54.283115456,33.10775623333694,marital_status,single,False,update
+P000080,2010-02-28 05:26:40.015598720,47.69496116150882,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded. Prior care history is incompletely documented.,False,baseline
+P000080,2010-02-28 05:26:40.015598720,47.69496116150882,employment,unemployed,False,baseline
+P000080,2010-02-28 05:26:40.015598720,47.69496116150882,marital_status,partnered,False,baseline
+P000080,2015-01-29 07:06:17.819924448,52.6124315751383,marital_status,single,False,update
+P000080,2015-03-03 18:49:52.075405920,52.704120222872135,marital_status,unknown/missing,True,update
+P000080,2015-04-04 16:02:32.499492032,52.79141510559992,employment,employed,False,update
+P000080,2015-10-15 08:29:12.234980032,53.321707122886245,employment,unknown/missing,True,update
+P000080,2018-06-25 15:14:27.883222112,56.0165781499817,marital_status,widowed,False,update
+P000083,2007-09-19 19:10:36.816531776,22.12447630609353,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown. Family and social history only partially available.,False,baseline
+P000083,2007-09-19 19:10:36.816531776,22.12447630609353,employment,unemployed,False,baseline
+P000083,2007-09-19 19:10:36.816531776,22.12447630609353,marital_status,single,False,baseline
+P000083,2011-12-27 17:35:39.508404048,26.395430696488155,employment,unknown/missing,True,update
+P000083,2012-04-25 01:04:46.631491712,26.72209555065682,marital_status,separated,False,update
+P000086,2006-01-12 21:08:45.990381120,64.49107397921007,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded. Family and social history only partially available.,False,baseline
+P000086,2006-01-12 21:08:45.990381120,64.49107397921007,employment,employed,False,baseline
+P000086,2006-01-12 21:08:45.990381120,64.49107397921007,marital_status,divorced,False,baseline
+P000086,2006-05-06 03:28:57.343593046,64.80118033400669,marital_status,single,False,update
+P000086,2009-04-03 15:17:53.204644944,67.71292339021352,employment,unemployed,False,update
+P000086,2010-10-14 13:46:32.362427200,69.24323972614425,employment,unknown/missing,True,update
+P000086,2014-01-29 19:17:09.290659488,72.53757046278295,employment,unemployed,False,update
+P000086,2015-03-10 11:29:57.426793344,73.64553450620939,employment,unknown/missing,True,update
+P000086,2015-07-20 14:53:29.671160192,74.0073252217502,marital_status,partnered,False,update
+P000099,2009-07-09 01:09:14.459626688,67.9768868190954,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported. Prior care history is incompletely documented.,False,baseline
+P000099,2009-07-09 01:09:14.459626688,67.9768868190954,employment,employed,False,baseline
+P000099,2009-07-09 01:09:14.459626688,67.9768868190954,marital_status,widowed,False,baseline
+P000099,2010-04-22 08:23:53.027607644,68.76349252702248,marital_status,single,False,update
+P000099,2010-07-15 21:47:37.689238980,68.99500489430153,employment,unemployed,False,update
+P000099,2011-01-29 00:16:56.887641264,69.53465648037367,employment,employed,False,update
+P000099,2011-06-20 18:01:03.578869096,69.92546249646888,employment,unknown/missing,True,update
+P000099,2013-05-25 16:17:57.272622720,71.8554909001548,marital_status,married,False,update
+P000099,2013-08-06 00:08:23.258594576,72.05351465054655,employment,unemployed,False,update
+P000099,2014-10-13 14:29:53.452101152,73.24066638159796,marital_status,single,False,update
+P000099,2017-01-04 02:44:19.415097888,75.46798117305808,employment,employed,False,update
+P000127,2014-06-30 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antidepressant reported; dose not recorded. Family and social history only partially available.,False,baseline
+P000127,2014-06-30 21:07:12.000000000,16.0,employment,unemployed,False,baseline
+P000127,2014-06-30 21:07:12.000000000,16.0,marital_status,divorced,False,baseline
+P000127,2015-08-19 11:00:04.736471424,17.135077073871756,marital_status,single,False,update
+P000127,2018-05-17 07:17:00.580602944,19.87803576785879,employment,employed,False,update
+P000130,2012-12-31 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000130,2012-12-31 21:07:11.999999968,15.999999999999968,employment,employed,False,baseline
+P000130,2012-12-31 21:07:11.999999968,15.999999999999968,marital_status,married,False,baseline
+P000130,2013-02-16 15:34:55.897972590,16.128049879404436,employment,unemployed,False,update
+P000130,2013-07-04 20:26:47.445028718,16.506435965204364,marital_status,unknown/missing,True,update
+P000130,2013-07-09 07:17:08.539783730,16.518624122500256,employment,employed,False,update
+P000131,2010-05-31 19:04:36.687909696,67.73799563050034,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000131,2010-05-31 19:04:36.687909696,67.73799563050034,employment,employed,False,baseline
+P000131,2010-05-31 19:04:36.687909696,67.73799563050034,marital_status,unknown/missing,True,baseline
+P000131,2014-01-03 19:09:23.612247616,71.33287662294656,marital_status,divorced,False,update
+P000131,2014-06-10 21:27:05.738010080,71.76572774639354,marital_status,partnered,False,update
+P000131,2014-12-21 05:30:07.277302352,72.29506218716249,marital_status,divorced,False,update
+P000131,2015-05-08 20:23:38.607209056,72.67459222954132,employment,unemployed,False,update
+P000131,2016-11-04 11:54:43.072966944,74.16852182279727,employment,employed,False,update
+P000131,2017-01-12 01:29:46.193963360,74.35624917748592,marital_status,single,False,update
+P000131,2018-01-10 17:50:56.281676512,75.35197493983816,marital_status,partnered,False,update
+P000134,2016-01-19 09:55:53.788808352,55.9557384942883,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Medication history: antipsychotic reported; adherence unknown.,False,baseline
+P000134,2016-01-19 09:55:53.788808352,55.9557384942883,employment,unemployed,False,baseline
+P000134,2016-01-19 09:55:53.788808352,55.9557384942883,marital_status,partnered,False,baseline
+P000134,2017-02-28 03:53:54.179026908,57.0666404720908,employment,employed,False,update
+P000138,2011-11-12 17:49:25.500144480,70.98774829394625,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown.,False,baseline
+P000138,2011-11-12 17:49:25.500144480,70.98774829394625,employment,unemployed,False,baseline
+P000138,2011-11-12 17:49:25.500144480,70.98774829394625,marital_status,partnered,False,baseline
+P000138,2012-02-28 06:55:22.758286546,71.28219869771598,employment,employed,False,update
+P000138,2012-04-21 07:49:27.511586786,71.42741059122523,employment,unknown/missing,True,update
+P000138,2013-04-20 18:36:23.742751128,72.42523877916823,employment,employed,False,update
+P000138,2014-08-08 10:29:07.255416064,73.72481814008576,marital_status,married,False,update
+P000138,2015-01-27 04:27:43.427533968,74.19505101213619,marital_status,single,False,update
+P000138,2015-05-22 17:33:56.473386192,74.51140517225446,employment,unknown/missing,True,update
+P000138,2015-06-06 09:25:20.869744112,74.5515448028613,employment,employed,False,update
+P000138,2015-11-17 12:45:11.066410816,75.00094150621423,employment,unemployed,False,update
+P000139,2012-02-16 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. Family and social history only partially available.,False,baseline
+P000139,2012-02-16 21:07:11.999999968,15.999999999999968,employment,unemployed,False,baseline
+P000139,2012-02-16 21:07:11.999999968,15.999999999999968,marital_status,unknown/missing,True,baseline
+P000139,2013-07-10 09:59:26.127604736,17.395062936610728,employment,employed,False,update
+P000139,2015-02-18 15:15:54.377874240,19.005553970417463,employment,unemployed,False,update
+P000139,2015-12-01 10:19:35.004223616,19.788031968493744,marital_status,separated,False,update
+P000139,2016-07-18 12:23:05.069379744,20.417985395718155,marital_status,single,False,update
+P000142,2013-03-04 19:26:36.134870400,67.88862232749443,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000142,2013-03-04 19:26:36.134870400,67.88862232749443,employment,unemployed,False,baseline
+P000142,2013-03-04 19:26:36.134870400,67.88862232749443,marital_status,single,False,baseline
+P000142,2013-04-19 17:51:09.947377189,68.01438459415779,employment,employed,False,update
+P000142,2016-05-14 13:18:52.742826016,71.08306064358895,marital_status,widowed,False,update
+P000142,2017-12-28 04:01:34.385569632,72.70557987937394,marital_status,separated,False,update
+P000148,2010-10-31 23:07:51.449913344,35.92671660589759,ehr_history,Baseline psychiatric assessment: mood stable at intake. Medication history: antipsychotic reported; adherence unknown. Family and social history only partially available.,False,baseline
+P000148,2010-10-31 23:07:51.449913344,35.92671660589759,employment,unemployed,False,baseline
+P000148,2010-10-31 23:07:51.449913344,35.92671660589759,marital_status,unknown/missing,True,baseline
+P000148,2012-09-29 20:41:19.375298216,37.840234994029146,employment,employed,False,update
+P000148,2012-10-02 20:25:09.636741360,37.84841798525856,employment,unemployed,False,update
+P000148,2012-11-21 14:24:57.573008040,37.98462847657175,marital_status,married,False,update
+P000148,2013-10-22 18:51:59.563134640,38.90233504056838,employment,employed,False,update
+P000148,2016-01-29 23:37:15.212972768,41.17260232271395,marital_status,widowed,False,update
+P000148,2016-10-29 00:58:22.777162528,41.920205182590585,employment,unemployed,False,update
+P000148,2017-07-23 15:35:25.540040320,42.65289390242886,employment,employed,False,update
+P000150,2014-10-18 14:58:12.552799376,67.0448366671407,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded. Family and social history only partially available.,False,baseline
+P000150,2014-10-18 14:58:12.552799376,67.0448366671407,employment,unknown/missing,True,baseline
+P000150,2014-10-18 14:58:12.552799376,67.0448366671407,marital_status,partnered,False,baseline
+P000150,2016-02-27 02:59:39.951017528,68.40421026564978,marital_status,married,False,update
+P000150,2016-11-05 19:46:43.899363800,69.09607759010957,employment,unemployed,False,update
+P000150,2016-11-26 11:58:36.254055624,69.15268357520888,employment,employed,False,update
+P000150,2017-02-23 01:38:58.418042192,69.39517918010719,employment,unemployed,False,update
+P000150,2018-05-05 12:11:15.822374800,70.5901088236397,marital_status,widowed,False,update
+P000177,2006-05-24 18:55:29.057024896,65.3642129017094,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded. Family and social history only partially available.,False,baseline
+P000177,2006-05-24 18:55:29.057024896,65.3642129017094,employment,employed,False,baseline
+P000177,2006-05-24 18:55:29.057024896,65.3642129017094,marital_status,married,False,baseline
+P000177,2008-11-04 23:06:18.401240496,67.81511656769766,employment,unemployed,False,update
+P000177,2009-12-02 14:16:09.404749184,68.89010603447215,employment,employed,False,update
+P000177,2010-02-22 06:51:47.695201360,69.11376953310321,employment,unemployed,False,update
+P000177,2010-02-23 03:55:49.107954816,69.11617285179994,employment,employed,False,update
+P000177,2011-07-26 22:15:34.338421056,70.53649967013355,marital_status,separated,False,update
+P000177,2012-03-30 22:28:57.614665536,71.21552606267755,marital_status,single,False,update
+P000177,2012-05-29 10:42:58.240119168,71.37845816795355,employment,unemployed,False,update
+P000177,2015-03-06 01:20:43.539716736,74.14541314191928,employment,employed,False,update
+P000177,2015-05-31 03:35:28.678676352,74.38112935237457,employment,unemployed,False,update
+P000177,2016-09-15 03:25:16.808068160,75.67613997727244,employment,employed,False,update
+P000177,2016-11-20 06:14:03.236809984,75.85716273348608,marital_status,widowed,False,update
+P000177,2016-12-02 20:17:24.191264832,75.89162109798386,employment,unknown/missing,True,update
+P000177,2017-01-29 15:24:34.152785152,76.04986293203426,employment,employed,False,update
+P000177,2017-12-25 11:52:09.187538880,76.9529683724695,employment,unemployed,False,update
+P000189,2008-10-16 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: mood stable at intake. Family and social history only partially available.,False,baseline
+P000189,2008-10-16 21:07:12.000000000,16.0,employment,employed,False,baseline
+P000189,2008-10-16 21:07:12.000000000,16.0,marital_status,married,False,baseline
+P000189,2009-01-03 04:02:40.302788243,16.214346693013578,employment,unknown/missing,True,update
+P000189,2009-04-12 09:24:34.541288086,16.48601153055872,marital_status,unknown/missing,True,update
+P000189,2010-08-30 12:23:35.953829432,17.868994950901133,employment,employed,False,update
+P000189,2011-05-12 07:14:51.663683824,18.566574226296755,employment,unemployed,False,update
+P000189,2012-04-06 01:05:47.118854256,19.469381805912505,employment,employed,False,update
+P000189,2013-08-30 14:32:32.296667968,20.869986185505745,marital_status,single,False,update
+P000189,2014-04-14 04:13:10.357568704,21.490313461121616,marital_status,separated,False,update
+P000189,2016-03-25 18:07:32.552684672,23.43855175090055,marital_status,unknown/missing,True,update
+P000189,2016-09-15 11:11:52.179030496,23.914157241137563,marital_status,married,False,update
+P000191,2012-05-30 21:07:11.999999936,15.999999999999968,ehr_history,,True,baseline
+P000191,2012-05-30 21:07:11.999999936,15.999999999999968,employment,employed,False,baseline
+P000191,2012-05-30 21:07:11.999999936,15.999999999999968,marital_status,single,False,baseline
+P000191,2014-04-10 19:32:50.890061304,17.86159737131965,employment,unemployed,False,update
+P000191,2014-06-08 03:00:58.483901072,18.02124801165525,employment,unknown/missing,True,update
+P000191,2015-01-18 16:42:21.807353056,18.63610090757029,marital_status,married,False,update
+P000191,2017-05-02 05:40:11.230895488,20.920994246557605,employment,employed,False,update
+P000213,2014-01-02 02:10:56.632524864,69.76485741184776,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Family and social history only partially available.,False,baseline
+P000213,2014-01-02 02:10:56.632524864,69.76485741184776,employment,employed,False,baseline
+P000213,2014-01-02 02:10:56.632524864,69.76485741184776,marital_status,married,False,baseline
+P000213,2014-06-09 06:14:09.300283968,70.19790914218467,employment,unemployed,False,update
+P000213,2015-02-13 07:06:20.211307184,70.87974720154551,employment,unknown/missing,True,update
+P000213,2018-02-06 06:56:14.255680432,73.8613087301866,employment,unemployed,False,update
+P000222,2011-12-09 18:28:41.857561344,54.38241696655498,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000222,2011-12-09 18:28:41.857561344,54.38241696655498,employment,unemployed,False,baseline
+P000222,2011-12-09 18:28:41.857561344,54.38241696655498,marital_status,partnered,False,baseline
+P000222,2013-12-12 05:19:50.955478368,56.39054085310514,employment,employed,False,update
+P000222,2016-06-17 21:52:14.347246816,58.90582634049216,employment,unemployed,False,update
+P000222,2016-12-01 05:51:17.160407136,59.36122972714243,employment,employed,False,update
+P000222,2017-12-03 15:13:47.520114176,60.36711110503048,employment,unknown/missing,True,update
+P000222,2017-12-26 05:12:35.897332768,60.42893990196938,employment,employed,False,update
+P000223,2015-01-07 07:57:57.149956384,69.16317764624277,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000223,2015-01-07 07:57:57.149956384,69.16317764624277,employment,unemployed,False,baseline
+P000223,2015-01-07 07:57:57.149956384,69.16317764624277,marital_status,partnered,False,baseline
+P000223,2015-02-25 01:44:21.044092577,69.29662475146814,employment,employed,False,update
+P000223,2016-05-04 00:41:30.966900776,70.48475692351089,employment,unemployed,False,update
+P000223,2017-03-23 00:55:00.489326008,71.36912653951262,employment,employed,False,update
+P000230,2013-04-27 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P000230,2013-04-27 21:07:11.999999968,15.999999999999968,employment,employed,False,baseline
+P000230,2013-04-27 21:07:11.999999968,15.999999999999968,marital_status,married,False,baseline
+P000230,2014-03-21 21:32:46.433846852,16.89808212256513,marital_status,partnered,False,update
+P000230,2014-05-03 00:59:55.702475224,17.01346808470204,marital_status,single,False,update
+P000230,2014-06-07 12:00:35.928835344,17.110550978714116,employment,unemployed,False,update
+P000230,2015-02-06 23:05:43.384407080,17.779864905343395,employment,employed,False,update
+P000230,2015-07-27 11:41:32.423063288,18.246746150358955,employment,unemployed,False,update
+P000230,2015-08-24 12:36:27.517976720,18.3235119639557,employment,employed,False,update
+P000230,2016-03-06 09:28:30.864179520,18.85704648738505,employment,unemployed,False,update
+P000230,2017-11-07 21:51:00.967816224,20.53131940523962,marital_status,partnered,False,update
+P000231,2017-10-08 01:24:52.218658140,33.39715103723129,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000231,2017-10-08 01:24:52.218658140,33.39715103723129,employment,unemployed,False,baseline
+P000231,2017-10-08 01:24:52.218658140,33.39715103723129,marital_status,single,False,baseline
+P000231,2018-03-29 05:25:52.411466908,33.86852926770199,employment,employed,False,update
+P000231,2018-04-01 05:21:21.232036000,33.87673439538888,marital_status,married,False,update
+P000231,2018-06-04 02:47:38.379238924,34.05166818326557,employment,unemployed,False,update
+P000233,2011-05-30 01:31:06.847668704,26.568822833322688,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Family and social history only partially available.,False,baseline
+P000233,2011-05-30 01:31:06.847668704,26.568822833322688,employment,employed,False,baseline
+P000233,2011-05-30 01:31:06.847668704,26.568822833322688,marital_status,widowed,False,baseline
+P000233,2014-09-13 16:44:51.583543872,29.86152438244173,employment,unemployed,False,update
+P000233,2015-05-29 12:15:19.093861728,30.567391904448225,employment,employed,False,update
+P000233,2016-09-21 07:39:32.273261120,31.88380082693856,employment,unemployed,False,update
+P000233,2016-12-07 08:24:36.591233568,32.09470536290174,marital_status,married,False,update
+P000246,2011-05-09 22:06:48.319569952,71.48379882567775,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented.,False,baseline
+P000246,2011-05-09 22:06:48.319569952,71.48379882567775,employment,employed,False,baseline
+P000246,2011-05-09 22:06:48.319569952,71.48379882567775,marital_status,single,False,baseline
+P000246,2011-11-13 15:53:34.141817952,71.99781569974873,employment,unknown/missing,True,update
+P000246,2015-11-25 01:14:48.976997856,76.02908192708209,employment,employed,False,update
+P000246,2017-06-20 18:33:11.978867584,77.59987694562095,employment,unemployed,False,update
+P000256,2015-08-27 13:29:57.288539504,71.03379937607849,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Prior care history is incompletely documented.,False,baseline
+P000256,2015-08-27 13:29:57.288539504,71.03379937607849,employment,employed,False,baseline
+P000256,2015-08-27 13:29:57.288539504,71.03379937607849,marital_status,widowed,False,baseline
+P000256,2015-12-07 18:39:52.535438667,71.31365515070777,marital_status,partnered,False,update
+P000256,2015-12-19 22:13:54.989373190,71.34691699595615,marital_status,single,False,update
+P000256,2018-01-02 09:53:33.023791072,73.3852500401113,marital_status,widowed,False,update
+P000256,2018-10-29 15:58:21.581169968,74.20731576297892,employment,unemployed,False,update
+P000264,2014-12-02 05:00:16.810507264,74.08285872509191,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown. Family and social history only partially available.,False,baseline
+P000264,2014-12-02 05:00:16.810507264,74.08285872509191,employment,unemployed,False,baseline
+P000264,2014-12-02 05:00:16.810507264,74.08285872509191,marital_status,separated,False,baseline
+P000264,2017-01-24 20:27:45.742593328,76.23114126302796,employment,unknown/missing,True,update
+P000264,2017-08-20 09:07:27.091322512,76.79933242891525,employment,unemployed,False,update
+P000264,2018-06-20 18:17:36.479042624,77.63270218489549,employment,unknown/missing,True,update
+P000264,2018-07-26 16:22:39.929491584,77.73104829419175,employment,employed,False,update
+P000269,2011-12-09 21:57:56.701239168,18.343744880723555,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported. Prior care history is incompletely documented.,False,baseline
+P000269,2011-12-09 21:57:56.701239168,18.343744880723555,employment,unemployed,False,baseline
+P000269,2011-12-09 21:57:56.701239168,18.343744880723555,marital_status,married,False,baseline
+P000269,2014-10-15 16:28:02.189556384,21.193278811894007,marital_status,widowed,False,update
+P000278,2015-10-17 15:45:31.114351312,71.30784782745656,ehr_history,,True,baseline
+P000278,2015-10-17 15:45:31.114351312,71.30784782745656,employment,unknown/missing,True,baseline
+P000278,2015-10-17 15:45:31.114351312,71.30784782745656,marital_status,married,False,baseline
+P000278,2016-02-19 06:35:01.811743282,71.64903954639671,employment,employed,False,update
+P000278,2016-03-19 09:37:03.343779624,71.72878493917217,employment,unemployed,False,update
+P000278,2018-03-09 13:10:55.798247584,73.70048462849793,employment,employed,False,update
+P000306,2013-12-07 02:41:22.827276864,55.68112163770684,ehr_history,,True,baseline
+P000306,2013-12-07 02:41:22.827276864,55.68112163770684,employment,employed,False,baseline
+P000306,2013-12-07 02:41:22.827276864,55.68112163770684,marital_status,separated,False,baseline
+P000306,2016-05-20 15:48:33.883364336,58.13304510154731,employment,unemployed,False,update
+P000309,2011-10-19 07:57:06.024664096,16.08611078866755,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported.,False,baseline
+P000309,2011-10-19 07:57:06.024664096,16.08611078866755,employment,employed,False,baseline
+P000309,2011-10-19 07:57:06.024664096,16.08611078866755,marital_status,partnered,False,baseline
+P000309,2011-12-30 02:53:32.638486284,16.28266293393881,marital_status,divorced,False,update
+P000309,2012-05-15 07:36:36.396128684,16.65829438775103,employment,unemployed,False,update
+P000309,2013-09-06 08:39:39.063286152,17.969871712048935,marital_status,married,False,update
+P000309,2013-11-06 23:16:10.636546616,18.138550600087942,employment,employed,False,update
+P000309,2015-02-12 00:29:49.231825424,19.403603657026995,employment,unemployed,False,update
+P000309,2015-03-27 19:13:08.784708496,19.52346946513429,marital_status,single,False,update
+P000309,2017-01-14 03:34:14.158033472,21.325965009486133,employment,employed,False,update
+P000309,2017-02-15 07:12:03.445177056,21.413992182932528,employment,unemployed,False,update
+P000309,2017-07-05 14:57:58.896835968,21.79818503690838,employment,employed,False,update
+P000309,2017-12-24 21:07:04.165550688,22.269806797739864,employment,unemployed,False,update
+P000309,2018-10-04 09:02:05.567208384,23.04599397201632,employment,employed,False,update
+P000315,2007-10-15 19:12:35.131736640,17.070303720452344,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Medication history: no regular medication reported.,False,baseline
+P000315,2007-10-15 19:12:35.131736640,17.070303720452344,employment,unemployed,False,baseline
+P000315,2007-10-15 19:12:35.131736640,17.070303720452344,marital_status,separated,False,baseline
+P000315,2009-10-09 12:42:58.610793768,19.054545528059656,marital_status,partnered,False,update
+P000315,2011-02-07 05:47:55.594372288,20.384379188280658,employment,employed,False,update
+P000315,2011-02-09 11:33:58.962574224,20.390512967240102,employment,unemployed,False,update
+P000315,2012-05-27 10:02:19.185518400,21.685368700548704,employment,employed,False,update
+P000315,2012-08-04 20:18:03.921654656,21.87545501611353,employment,unemployed,False,update
+P000315,2014-10-13 07:16:39.541435904,24.064294914839536,marital_status,single,False,update
+P000315,2015-10-24 10:36:19.572832992,25.094127581549458,marital_status,partnered,False,update
+P000315,2017-05-28 22:00:07.712436032,26.688889589604077,employment,employed,False,update
+P000320,2007-04-11 19:47:23.349695424,64.81946809532477,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Family and social history only partially available.,False,baseline
+P000320,2007-04-11 19:47:23.349695424,64.81946809532477,employment,unemployed,False,baseline
+P000320,2007-04-11 19:47:23.349695424,64.81946809532477,marital_status,married,False,baseline
+P000320,2010-09-19 06:26:04.332792544,68.25949363971502,employment,employed,False,update
+P000320,2013-03-30 13:15:14.061660832,70.78735975710393,employment,unemployed,False,update
+P000320,2014-06-27 11:01:46.542818144,72.03011579010602,employment,employed,False,update
+P000320,2015-09-01 23:05:04.424655232,73.21152893424735,marital_status,divorced,False,update
+P000320,2016-05-22 08:19:29.099843616,73.93265259267889,marital_status,unknown/missing,True,update
+P000320,2016-08-16 16:09:17.472138560,74.16900584923849,employment,unemployed,False,update
+P000320,2017-07-11 22:33:23.842744832,75.07050756494938,employment,employed,False,update
+P000320,2018-04-26 13:36:14.682648448,75.86074138854246,marital_status,separated,False,update
+P000320,2018-06-23 16:19:37.351050112,76.01985062914345,employment,unemployed,False,update
+P000324,2016-10-11 16:47:20.565414160,67.08611277050503,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded. Prior care history is incompletely documented.,False,baseline
+P000324,2016-10-11 16:47:20.565414160,67.08611277050503,employment,employed,False,baseline
+P000324,2016-10-11 16:47:20.565414160,67.08611277050503,marital_status,single,False,baseline
+P000324,2017-08-04 03:42:23.918112896,67.89777871823973,marital_status,partnered,False,update
+P000324,2018-07-23 13:27:34.861263584,68.86537251320291,employment,unemployed,False,update
+P000327,2008-01-08 20:42:41.513290304,32.58345614346056,ehr_history,,True,baseline
+P000327,2008-01-08 20:42:41.513290304,32.58345614346056,employment,employed,False,baseline
+P000327,2008-01-08 20:42:41.513290304,32.58345614346056,marital_status,married,False,baseline
+P000327,2010-12-24 00:54:30.402469424,35.54087449264647,employment,unemployed,False,update
+P000327,2011-08-07 20:34:01.042285264,36.16188410852496,employment,employed,False,update
+P000327,2011-09-24 20:50:41.513483104,36.29333534853058,employment,unemployed,False,update
+P000327,2012-10-06 11:39:41.687982368,37.32721657300687,employment,employed,False,update
+P000327,2013-12-17 20:29:04.420867744,38.52468845599751,employment,unemployed,False,update
+P000327,2016-01-04 21:41:03.670882432,40.57277976880917,employment,unknown/missing,True,update
+P000327,2016-02-14 09:18:29.685286368,40.68362209649671,marital_status,single,False,update
+P000327,2016-12-31 10:18:44.248988832,41.562604786704,marital_status,separated,False,update
+P000327,2017-04-22 23:49:53.003631616,41.87079262292605,employment,employed,False,update
+P000339,2011-02-26 08:12:31.529583200,70.15432769075996,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded.,False,baseline
+P000339,2011-02-26 08:12:31.529583200,70.15432769075996,employment,employed,False,baseline
+P000339,2011-02-26 08:12:31.529583200,70.15432769075996,marital_status,partnered,False,baseline
+P000339,2012-01-23 11:28:35.273068684,71.06094768826432,employment,unemployed,False,update
+P000339,2012-07-01 13:47:48.111522344,71.49927750029603,employment,employed,False,update
+P000339,2016-10-12 07:21:10.793580416,75.78062896548374,marital_status,married,False,update
+P000343,2012-03-16 03:16:16.863230080,63.06532319291261,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. Medication history: antipsychotic reported; adherence unknown. Family and social history only partially available.,False,baseline
+P000343,2012-03-16 03:16:16.863230080,63.06532319291261,employment,employed,False,baseline
+P000343,2012-03-16 03:16:16.863230080,63.06532319291261,marital_status,single,False,baseline
+P000343,2012-10-23 03:22:08.348853696,63.67041177959308,employment,unemployed,False,update
+P000343,2015-03-20 05:56:09.627576592,66.07458697619391,marital_status,married,False,update
+P000343,2016-05-26 08:11:12.652615776,67.26035748486152,employment,unknown/missing,True,update
+P000343,2017-08-06 00:03:17.917752128,68.45589516749754,marital_status,unknown/missing,True,update
+P000343,2018-03-29 08:57:22.665379808,69.10031877176793,employment,employed,False,update
+P000347,2012-05-13 21:07:12.000000000,16.0,ehr_history,,True,baseline
+P000347,2012-05-13 21:07:12.000000000,16.0,employment,employed,False,baseline
+P000347,2012-05-13 21:07:12.000000000,16.0,marital_status,married,False,baseline
+P000347,2012-11-12 19:24:43.599923384,16.500842147236632,employment,unemployed,False,update
+P000347,2013-10-28 21:14:44.556280456,17.459318775662506,employment,employed,False,update
+P000347,2014-05-22 01:07:07.633218088,18.021031550614207,employment,unemployed,False,update
+P000347,2015-04-20 11:05:36.425418064,18.9338924882675,employment,employed,False,update
+P000347,2015-05-24 16:44:20.793013392,19.027625380075158,employment,unemployed,False,update
+P000347,2016-08-10 16:16:46.990655760,20.2432036842676,employment,employed,False,update
+P000347,2017-12-14 03:05:15.466161728,21.586011078197977,marital_status,single,False,update
+P000355,2010-08-06 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown.,False,baseline
+P000355,2010-08-06 21:07:11.999999968,15.999999999999968,employment,employed,False,baseline
+P000355,2010-08-06 21:07:11.999999968,15.999999999999968,marital_status,married,False,baseline
+P000355,2011-03-20 11:15:17.896011604,16.61764158642478,employment,unemployed,False,update
+P000355,2011-07-22 06:30:00.664693300,16.956599631824147,marital_status,single,False,update
+P000355,2011-09-27 00:40:55.429155644,17.139375673200462,marital_status,unknown/missing,True,update
+P000355,2012-07-23 13:52:33.985030536,17.962252944613585,employment,employed,False,update
+P000355,2013-03-01 14:28:54.941363584,18.567399504912977,employment,unemployed,False,update
+P000355,2017-07-30 17:57:09.394389824,22.981301533633182,employment,employed,False,update
+P000375,2014-02-12 17:32:29.113418336,23.181121836906744,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P000375,2014-02-12 17:32:29.113418336,23.181121836906744,employment,unknown/missing,True,baseline
+P000375,2014-02-12 17:32:29.113418336,23.181121836906744,marital_status,widowed,False,baseline
+P000375,2016-03-23 11:01:08.872356960,25.288566173068823,employment,unemployed,False,update
+P000375,2017-12-19 16:03:38.821015152,27.030450178490455,employment,employed,False,update
+P000378,2010-09-15 15:07:10.568397632,20.544241109483483,ehr_history,Baseline psychiatric assessment: mood stable at intake. Medication history: no regular medication reported.,False,baseline
+P000378,2010-09-15 15:07:10.568397632,20.544241109483483,employment,unemployed,False,baseline
+P000378,2010-09-15 15:07:10.568397632,20.544241109483483,marital_status,widowed,False,baseline
+P000378,2016-06-23 17:36:50.937347872,26.31603365677861,employment,employed,False,update
+P000378,2016-08-28 02:29:12.851163520,26.49500981118718,employment,unemployed,False,update
+P000378,2018-05-23 14:57:59.354585184,28.22952861082986,employment,employed,False,update
+P000387,2014-04-07 07:25:21.749454736,68.69767149087954,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded.,False,baseline
+P000387,2014-04-07 07:25:21.749454736,68.69767149087954,employment,employed,False,baseline
+P000387,2014-04-07 07:25:21.749454736,68.69767149087954,marital_status,married,False,baseline
+P000387,2014-11-15 07:33:22.160520284,69.30550207005162,marital_status,single,False,update
+P000387,2016-01-03 03:56:35.686103696,70.43858341217819,employment,unemployed,False,update
+P000387,2016-05-05 03:32:29.395543992,70.77530014291442,employment,employed,False,update
+P000397,2011-11-23 18:27:20.602047328,17.576730496723734,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported.,False,baseline
+P000397,2011-11-23 18:27:20.602047328,17.576730496723734,employment,employed,False,baseline
+P000397,2011-11-23 18:27:20.602047328,17.576730496723734,marital_status,separated,False,baseline
+P000397,2012-06-04 14:44:42.313053040,18.107461148752662,marital_status,partnered,False,update
+P000397,2013-09-22 18:09:03.566254952,19.40835552071869,employment,unknown/missing,True,update
+P000397,2016-04-22 22:36:47.609556736,21.990710877576404,marital_status,divorced,False,update
+P000397,2016-12-15 15:41:24.842934112,22.63880506719831,employment,unemployed,False,update
+P000397,2018-06-08 09:02:15.356117376,24.116515921946995,employment,employed,False,update
+P000427,2015-05-02 11:55:53.955724704,73.68391452874548,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000427,2015-05-02 11:55:53.955724704,73.68391452874548,employment,employed,False,baseline
+P000427,2015-05-02 11:55:53.955724704,73.68391452874548,marital_status,single,False,baseline
+P000427,2015-09-07 16:44:56.536828598,74.03491619015765,employment,unemployed,False,update
+P000427,2016-05-27 00:09:04.359394108,74.75309226186968,employment,employed,False,update
+P000427,2016-07-07 19:05:02.691417224,74.86750630071676,employment,unemployed,False,update
+P000427,2016-08-29 18:42:57.038891632,75.01257336383091,employment,employed,False,update
+P000427,2018-05-02 14:54:12.358943024,76.68499962730691,employment,unemployed,False,update
+P000429,2016-09-22 07:23:43.592597304,68.96324536009045,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000429,2016-09-22 07:23:43.592597304,68.96324536009045,employment,employed,False,baseline
+P000429,2016-09-22 07:23:43.592597304,68.96324536009045,marital_status,separated,False,baseline
+P000435,2013-01-17 01:36:52.861673568,27.713278926991205,ehr_history,,True,baseline
+P000435,2013-01-17 01:36:52.861673568,27.713278926991205,employment,unemployed,False,baseline
+P000435,2013-01-17 01:36:52.861673568,27.713278926991205,marital_status,married,False,baseline
+P000435,2013-05-17 02:34:57.635943894,28.041938195930435,employment,unknown/missing,True,update
+P000435,2014-07-19 06:33:51.580165968,29.21421661953174,marital_status,single,False,update
+P000435,2016-10-02 23:49:06.258422352,31.42293800296118,marital_status,married,False,update
+P000435,2016-11-24 00:11:51.201125008,31.56535242063696,marital_status,single,False,update
+P000435,2017-06-21 00:06:18.383283648,32.137564438520016,employment,unemployed,False,update
+P000448,2013-02-25 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000448,2013-02-25 21:07:11.999999968,15.999999999999968,employment,employed,False,baseline
+P000448,2013-02-25 21:07:11.999999968,15.999999999999968,marital_status,single,False,baseline
+P000448,2017-06-25 09:20:33.512069584,20.32728742345169,marital_status,unknown/missing,True,update
+P000465,2009-10-28 12:30:50.389507936,33.319017958055866,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Family and social history only partially available.,False,baseline
+P000465,2009-10-28 12:30:50.389507936,33.319017958055866,employment,employed,False,baseline
+P000465,2009-10-28 12:30:50.389507936,33.319017958055866,marital_status,unknown/missing,True,baseline
+P000465,2012-04-08 03:01:09.155861296,35.76288575512174,marital_status,single,False,update
+P000465,2013-12-18 17:50:51.317723120,37.45934180581579,employment,unknown/missing,True,update
+P000465,2014-05-11 21:51:01.651324048,37.85405706011541,marital_status,married,False,update
+P000465,2014-09-05 20:05:09.803415200,38.17419089788565,employment,employed,False,update
+P000465,2015-02-26 06:07:48.128118976,38.64899462179104,marital_status,single,False,update
+P000465,2015-03-06 15:11:03.957105152,38.6719307985481,marital_status,partnered,False,update
+P000465,2017-02-13 00:33:24.627914752,40.61417606579729,marital_status,married,False,update
+P000465,2018-02-01 01:30:30.171224384,41.58076579041041,employment,unemployed,False,update
+P000465,2018-03-10 04:14:58.023716992,41.68238104946625,employment,employed,False,update
+P000474,2016-04-21 21:07:11.999999984,15.999999999999968,ehr_history,,True,baseline
+P000474,2016-04-21 21:07:11.999999984,15.999999999999968,employment,unemployed,False,baseline
+P000474,2016-04-21 21:07:11.999999984,15.999999999999968,marital_status,unknown/missing,True,baseline
+P000474,2017-01-08 05:22:31.534263588,16.715535503373793,marital_status,widowed,False,update
+P000475,2016-12-10 07:45:37.271605608,21.351084137390867,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown. Family and social history only partially available.,False,baseline
+P000475,2016-12-10 07:45:37.271605608,21.351084137390867,employment,unemployed,False,baseline
+P000475,2016-12-10 07:45:37.271605608,21.351084137390867,marital_status,single,False,baseline
+P000475,2018-06-27 11:57:16.314976264,22.895742158969465,employment,employed,False,update
+P000477,2014-12-24 22:01:52.059728864,47.762563129028685,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000477,2014-12-24 22:01:52.059728864,47.762563129028685,employment,employed,False,baseline
+P000477,2014-12-24 22:01:52.059728864,47.762563129028685,marital_status,divorced,False,baseline
+P000477,2015-09-19 23:24:51.373160664,48.49921790206988,marital_status,single,False,update
+P000480,2014-10-28 21:00:03.528054624,53.33682427656682,ehr_history,,True,baseline
+P000480,2014-10-28 21:00:03.528054624,53.33682427656682,employment,unemployed,False,baseline
+P000480,2014-10-28 21:00:03.528054624,53.33682427656682,marital_status,unknown/missing,True,baseline
+P000480,2016-02-25 16:49:58.485015944,54.66423368407112,employment,unknown/missing,True,update
+P000480,2017-11-22 01:30:27.944797520,56.40379425569354,employment,unemployed,False,update
+P000484,2013-02-20 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: mood stable at intake. Medication history: no regular medication reported.,False,baseline
+P000484,2013-02-20 21:07:12.000000000,16.0,employment,employed,False,baseline
+P000484,2013-02-20 21:07:12.000000000,16.0,marital_status,single,False,baseline
+P000484,2013-05-28 23:22:26.540337693,16.26583411922475,employment,unemployed,False,update
+P000505,2015-06-27 13:13:37.900565744,73.76072371946965,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded.,False,baseline
+P000505,2015-06-27 13:13:37.900565744,73.76072371946965,employment,employed,False,baseline
+P000505,2015-06-27 13:13:37.900565744,73.76072371946965,marital_status,widowed,False,baseline
+P000505,2016-02-01 10:39:06.583343228,74.36003155765306,marital_status,married,False,update
+P000505,2016-06-11 03:50:42.459299824,74.7179208707894,employment,unknown/missing,True,update
+P000505,2018-01-26 01:35:18.289789328,76.34398018825738,marital_status,divorced,False,update
+P000514,2016-03-20 21:07:11.999999984,15.999999999999968,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Family and social history only partially available.,False,baseline
+P000514,2016-03-20 21:07:11.999999984,15.999999999999968,employment,employed,False,baseline
+P000514,2016-03-20 21:07:11.999999984,15.999999999999968,marital_status,widowed,False,baseline
+P000525,2014-03-21 05:13:17.024767776,22.300848225923943,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown.,False,baseline
+P000525,2014-03-21 05:13:17.024767776,22.300848225923943,employment,employed,False,baseline
+P000525,2014-03-21 05:13:17.024767776,22.300848225923943,marital_status,married,False,baseline
+P000525,2014-04-23 01:53:18.091189758,22.390818926086048,employment,unemployed,False,update
+P000525,2015-03-03 22:38:23.211446760,23.252889037301383,employment,employed,False,update
+P000525,2015-09-04 15:41:19.268294856,23.75860885640331,employment,unemployed,False,update
+P000525,2018-09-12 18:01:52.677397040,26.78152543621438,marital_status,single,False,update
+P000556,2008-11-23 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Medication history: no regular medication reported.,False,baseline
+P000556,2008-11-23 21:07:12.000000000,16.0,employment,unemployed,False,baseline
+P000556,2008-11-23 21:07:12.000000000,16.0,marital_status,divorced,False,baseline
+P000556,2009-07-09 10:16:20.144198476,16.62300529354668,marital_status,single,False,update
+P000556,2010-02-08 16:29:47.529782504,17.209627454824613,employment,employed,False,update
+P000556,2010-08-07 05:21:00.367118880,17.701179136917876,employment,unknown/missing,True,update
+P000556,2010-10-01 13:58:21.656937656,17.852747681618226,employment,unemployed,False,update
+P000556,2011-12-01 20:21:44.688606464,19.019825003650748,employment,employed,False,update
+P000556,2014-05-05 10:21:48.788171520,21.444469947166365,marital_status,unknown/missing,True,update
+P000556,2015-05-15 07:31:29.902433344,22.470861251189067,employment,unknown/missing,True,update
+P000556,2017-07-31 05:52:04.258910304,24.68290106911816,employment,employed,False,update
+P000556,2017-10-16 14:55:51.046161344,24.894753810385787,employment,unemployed,False,update
+P000556,2018-01-22 05:31:59.206661312,25.16199660875554,employment,employed,False,update
+P000594,2016-12-18 17:17:05.668935608,21.458949066720223,ehr_history,,True,baseline
+P000594,2016-12-18 17:17:05.668935608,21.458949066720223,employment,unemployed,False,baseline
+P000594,2016-12-18 17:17:05.668935608,21.458949066720223,marital_status,single,False,baseline
+P000594,2017-10-21 18:43:46.087396704,22.29965131256644,employment,employed,False,update
+P000594,2018-03-03 12:06:09.316620312,22.66303695352516,employment,unknown/missing,True,update
+P000594,2018-03-04 00:43:14.577842344,22.66447642274963,employment,employed,False,update
+P000601,2011-08-25 16:22:44.448352768,70.37703021661763,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000601,2011-08-25 16:22:44.448352768,70.37703021661763,employment,employed,False,baseline
+P000601,2011-08-25 16:22:44.448352768,70.37703021661763,marital_status,partnered,False,baseline
+P000601,2018-09-11 09:46:55.157784832,77.42365026754752,employment,unemployed,False,update
+P000607,2009-11-21 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded. Prior care history is incompletely documented.,False,baseline
+P000607,2009-11-21 21:07:12.000000000,16.0,employment,employed,False,baseline
+P000607,2009-11-21 21:07:12.000000000,16.0,marital_status,single,False,baseline
+P000607,2011-03-20 19:40:48.539887664,17.324982734070378,marital_status,married,False,update
+P000607,2011-06-05 06:39:11.415544152,17.534315462898448,marital_status,partnered,False,update
+P000607,2011-11-08 21:01:02.681524872,17.963067620774176,employment,unknown/missing,True,update
+P000607,2012-10-12 14:19:42.670941648,18.89045503098467,marital_status,married,False,update
+P000607,2015-02-26 18:36:04.047400288,21.26470782246017,employment,employed,False,update
+P000607,2015-10-07 05:35:57.018109504,21.873777829307137,employment,unemployed,False,update
+P000607,2018-08-22 02:48:02.090939936,24.74826092491252,employment,employed,False,update
+P000618,2007-12-07 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: no regular medication reported. Prior care history is incompletely documented.,False,baseline
+P000618,2007-12-07 21:07:12.000000000,16.0,employment,unemployed,False,baseline
+P000618,2007-12-07 21:07:12.000000000,16.0,marital_status,single,False,baseline
+P000618,2010-08-20 03:28:52.279043072,18.700301989845,marital_status,unknown/missing,True,update
+P000618,2011-11-28 07:13:03.965983136,19.97385501508457,marital_status,single,False,update
+P000618,2012-02-08 20:36:59.283026976,20.17251283593634,employment,employed,False,update
+P000618,2012-08-05 20:41:58.718780576,20.66260767892858,marital_status,partnered,False,update
+P000618,2014-07-14 17:31:31.841581920,22.600683736552945,employment,unemployed,False,update
+P000618,2016-04-07 15:47:53.412646432,24.33358181780821,employment,employed,False,update
+P000618,2016-11-30 02:00:27.506955552,24.980892562341115,employment,unemployed,False,update
+P000618,2017-05-17 08:40:18.345919104,25.44162117893766,employment,employed,False,update
+P000618,2017-08-01 15:36:38.430205696,25.65049369882762,employment,unemployed,False,update
+P000626,2011-07-18 17:41:18.698045376,63.80894069547797,ehr_history,Baseline psychiatric assessment: persistent anxiety reported.,False,baseline
+P000626,2011-07-18 17:41:18.698045376,63.80894069547797,employment,unemployed,False,baseline
+P000626,2011-07-18 17:41:18.698045376,63.80894069547797,marital_status,separated,False,baseline
+P000626,2013-06-10 20:59:26.747846472,65.7066869686225,employment,unknown/missing,True,update
+P000626,2014-02-21 13:11:18.808305424,66.40670109104026,employment,unemployed,False,update
+P000626,2015-02-13 03:28:35.940658384,67.38302596336484,marital_status,single,False,update
+P000626,2016-01-22 22:00:14.043461472,68.32424164550052,employment,employed,False,update
+P000626,2016-02-18 00:46:39.716065760,68.3957436610502,marital_status,married,False,update
+P000626,2016-07-17 17:50:35.547865952,68.80837653610735,employment,unemployed,False,update
+P000626,2016-07-30 09:25:34.428162912,68.84300912293945,marital_status,unknown/missing,True,update
+P000626,2017-05-26 13:43:58.131777792,69.66487251784575,employment,employed,False,update
+P000626,2018-09-20 11:26:28.014530240,70.9842822594061,employment,unknown/missing,True,update
+P000636,2017-06-11 17:27:44.922919736,42.08909862153097,ehr_history,Baseline psychiatric assessment: concentration difficulties reported.,False,baseline
+P000636,2017-06-11 17:27:44.922919736,42.08909862153097,employment,employed,False,baseline
+P000636,2017-06-11 17:27:44.922919736,42.08909862153097,marital_status,partnered,False,baseline
+P000636,2017-08-22 01:53:48.010672628,42.284452186975216,employment,unemployed,False,update
+P000636,2018-06-28 23:50:07.224286940,43.13570611078935,employment,employed,False,update
+P000636,2018-09-14 10:59:57.095285472,43.34779851664016,employment,unemployed,False,update
+P000638,2013-03-04 08:45:31.441097216,67.95311319803943,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Prior care history is incompletely documented.,False,baseline
+P000638,2013-03-04 08:45:31.441097216,67.95311319803943,employment,employed,False,baseline
+P000638,2013-03-04 08:45:31.441097216,67.95311319803943,marital_status,separated,False,baseline
+P000638,2016-05-18 23:29:55.746779904,71.1608838441298,marital_status,single,False,update
+P000638,2016-08-09 17:17:00.393632208,71.38742107899495,marital_status,married,False,update
+P000638,2017-06-06 07:44:16.628710160,72.21044214373777,employment,unknown/missing,True,update
+P000638,2017-12-01 01:38:49.640023648,72.69709475237099,employment,unemployed,False,update
+P000655,2011-08-27 16:44:30.892362720,20.922257348946815,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: no regular medication reported. Prior care history is incompletely documented.,False,baseline
+P000655,2011-08-27 16:44:30.892362720,20.922257348946815,employment,unknown/missing,True,baseline
+P000655,2011-08-27 16:44:30.892362720,20.922257348946815,marital_status,separated,False,baseline
+P000655,2012-02-13 15:22:46.796072442,21.38754613550991,employment,employed,False,update
+P000655,2012-02-22 08:13:13.442072228,21.41137057349745,marital_status,married,False,update
+P000655,2013-02-19 18:25:14.944617776,22.40639447512602,employment,unemployed,False,update
+P000655,2013-04-01 02:08:41.835343120,22.516791920694445,employment,employed,False,update
+P000655,2014-06-18 22:30:32.755528128,23.73200785536979,employment,unemployed,False,update
+P000662,2011-01-19 21:07:12.000000032,16.0,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P000662,2011-01-19 21:07:12.000000032,16.0,employment,employed,False,baseline
+P000662,2011-01-19 21:07:12.000000032,16.0,marital_status,single,False,baseline
+P000662,2011-07-25 14:31:38.107689714,16.51123651319968,employment,unemployed,False,update
+P000662,2013-07-09 02:16:26.660161472,18.467442187070585,employment,employed,False,update
+P000662,2014-11-21 00:22:41.790906816,19.836179419067683,employment,unemployed,False,update
+P000662,2015-04-17 18:02:51.404620672,20.24066745751049,employment,employed,False,update
+P000662,2016-05-28 16:46:24.026976064,21.3548502411442,employment,unemployed,False,update
+P000662,2016-09-10 16:07:22.235151200,21.64225626844922,employment,employed,False,update
+P000662,2018-03-27 22:22:09.283982880,23.18441049959397,employment,unemployed,False,update
+P000663,2015-08-08 21:07:12.000000016,16.0,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Family and social history only partially available.,False,baseline
+P000663,2015-08-08 21:07:12.000000016,16.0,employment,unemployed,False,baseline
+P000663,2015-08-08 21:07:12.000000016,16.0,marital_status,partnered,False,baseline
+P000663,2017-05-07 08:21:31.368216104,17.74532886979123,marital_status,single,False,update
+P000663,2018-02-02 15:14:51.046103792,18.48808753919275,marital_status,married,False,update
+P000663,2018-07-12 20:05:38.239019936,18.92670553984491,employment,employed,False,update
+P000668,2010-07-02 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Prior care history is incompletely documented.,False,baseline
+P000668,2010-07-02 21:07:11.999999968,15.999999999999968,employment,unemployed,False,baseline
+P000668,2010-07-02 21:07:11.999999968,15.999999999999968,marital_status,widowed,False,baseline
+P000668,2012-04-20 17:44:00.177524160,17.80115646712405,marital_status,single,False,update
+P000668,2013-09-07 17:00:02.389224576,19.183715917469584,marital_status,married,False,update
+P000668,2016-07-27 18:32:11.641635808,22.069645117869268,employment,employed,False,update
+P000668,2018-02-23 04:08:42.420489216,23.64503778503349,employment,unemployed,False,update
+P000668,2018-02-28 02:36:06.301791936,23.658551253675924,marital_status,divorced,False,update
+P000668,2018-03-31 13:41:20.749276608,23.744691209381557,marital_status,married,False,update
+P000668,2018-05-15 11:45:21.130795264,23.867676483165877,employment,employed,False,update
+P000679,2010-09-20 02:07:24.730887136,43.26191086930344,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Family and social history only partially available.,False,baseline
+P000679,2010-09-20 02:07:24.730887136,43.26191086930344,employment,employed,False,baseline
+P000679,2010-09-20 02:07:24.730887136,43.26191086930344,marital_status,divorced,False,baseline
+P000679,2011-12-29 15:37:23.408625712,44.53657765834373,employment,unemployed,False,update
+P000679,2012-02-20 19:31:48.707338240,44.682132441287045,marital_status,widowed,False,update
+P000679,2012-03-22 20:35:01.653777544,44.76712775219158,marital_status,divorced,False,update
+P000713,2016-05-29 01:16:46.584049136,74.50133354400162,ehr_history,,True,baseline
+P000713,2016-05-29 01:16:46.584049136,74.50133354400162,employment,employed,False,baseline
+P000713,2016-05-29 01:16:46.584049136,74.50133354400162,marital_status,partnered,False,baseline
+P000731,2017-10-04 19:13:10.843521632,26.78713681991597,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown.,False,baseline
+P000731,2017-10-04 19:13:10.843521632,26.78713681991597,employment,unemployed,False,baseline
+P000731,2017-10-04 19:13:10.843521632,26.78713681991597,marital_status,separated,False,baseline
+P000738,2010-03-08 21:52:20.196791520,34.79855532932303,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported.,False,baseline
+P000738,2010-03-08 21:52:20.196791520,34.79855532932303,employment,employed,False,baseline
+P000738,2010-03-08 21:52:20.196791520,34.79855532932303,marital_status,divorced,False,baseline
+P000738,2010-06-30 10:47:56.395860844,35.10941349455614,employment,unemployed,False,update
+P000738,2012-06-17 07:39:22.714651840,37.07487220928851,marital_status,single,False,update
+P000738,2012-11-25 09:11:55.881179152,37.515851210255626,marital_status,partnered,False,update
+P000738,2013-04-17 20:44:53.370043072,37.90868945042736,employment,employed,False,update
+P000738,2014-04-03 03:45:52.075244272,38.86775731937748,employment,unemployed,False,update
+P000738,2014-10-25 09:31:19.931887232,39.42968509543909,marital_status,single,False,update
+P000738,2015-04-14 23:41:29.716204640,39.89948362935065,employment,employed,False,update
+P000752,2014-12-29 20:01:21.086297312,26.524389335392627,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: no acute findings documented. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000752,2014-12-29 20:01:21.086297312,26.524389335392627,employment,unemployed,False,baseline
+P000752,2014-12-29 20:01:21.086297312,26.524389335392627,marital_status,married,False,baseline
+P000752,2016-04-30 13:37:11.788020288,27.859757551617157,employment,unknown/missing,True,update
+P000761,2011-02-10 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: no acute findings documented. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000761,2011-02-10 21:07:11.999999968,15.999999999999968,employment,unemployed,False,baseline
+P000761,2011-02-10 21:07:11.999999968,15.999999999999968,marital_status,partnered,False,baseline
+P000761,2012-07-01 06:28:37.530114472,17.386448397491414,marital_status,single,False,update
+P000761,2016-01-03 05:44:49.951709568,20.893624008798717,marital_status,divorced,False,update
+P000761,2017-04-11 01:11:22.260442176,22.163492921003307,employment,employed,False,update
+P000761,2017-09-14 19:32:01.913352864,22.59269912738568,employment,unemployed,False,update
+P000761,2017-10-07 17:24:09.214339328,22.655427850393732,employment,employed,False,update
+P000761,2017-12-16 03:09:10.275424288,22.84545574222198,marital_status,partnered,False,update
+P000767,2014-09-01 05:33:49.159819120,17.922973966554785,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P000767,2014-09-01 05:33:49.159819120,17.922973966554785,employment,unemployed,False,baseline
+P000767,2014-09-01 05:33:49.159819120,17.922973966554785,marital_status,married,False,baseline
+P000767,2014-09-05 14:11:00.368187677,17.934908934430283,marital_status,partnered,False,update
+P000767,2016-05-04 00:34:00.447954064,19.5952651082384,employment,employed,False,update
+P000767,2016-07-10 19:06:13.894520272,19.78081957644452,marital_status,widowed,False,update
+P000771,2016-01-26 23:48:55.217201696,41.48474590376159,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000771,2016-01-26 23:48:55.217201696,41.48474590376159,employment,employed,False,baseline
+P000771,2016-01-26 23:48:55.217201696,41.48474590376159,marital_status,single,False,baseline
+P000771,2017-10-21 03:21:50.895473928,43.218245884313326,employment,unemployed,False,update
+P000773,2010-10-21 00:46:44.573406048,68.81190568003545,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported.,False,baseline
+P000773,2010-10-21 00:46:44.573406048,68.81190568003545,employment,employed,False,baseline
+P000773,2010-10-21 00:46:44.573406048,68.81190568003545,marital_status,single,False,baseline
+P000773,2011-10-04 22:07:27.985492536,69.76713238925903,employment,unemployed,False,update
+P000773,2014-01-26 06:09:28.550986736,72.07884235939474,employment,employed,False,update
+P000773,2014-07-14 03:44:24.658330720,72.54127282819744,employment,unemployed,False,update
+P000773,2014-10-02 15:36:29.845738208,72.76165929604792,marital_status,partnered,False,update
+P000773,2015-10-30 22:00:15.357031200,73.83838639920076,employment,employed,False,update
+P000773,2016-04-03 18:09:49.261257216,74.26506176075742,marital_status,single,False,update
+P000773,2018-03-02 12:36:17.916931904,76.1754867173779,employment,unemployed,False,update
+P000773,2018-04-05 06:17:24.718997920,76.26785516925075,employment,employed,False,update
+P000773,2018-08-25 08:01:46.620826208,76.65683639601272,marital_status,separated,False,update
+P000775,2009-03-24 01:12:48.945648128,67.88654268465623,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Prior care history is incompletely documented.,False,baseline
+P000775,2009-03-24 01:12:48.945648128,67.88654268465623,employment,unemployed,False,baseline
+P000775,2009-03-24 01:12:48.945648128,67.88654268465623,marital_status,married,False,baseline
+P000775,2010-09-26 22:18:45.652527056,69.39753641772903,employment,employed,False,update
+P000775,2014-04-05 06:00:42.368163872,72.91936313647034,employment,unemployed,False,update
+P000775,2017-05-12 08:32:09.791314880,76.02169974436424,employment,employed,False,update
+P000775,2018-08-15 01:31:52.394547328,77.28033786008697,employment,unemployed,False,update
+P000775,2018-09-01 02:54:08.250853952,77.32703869026558,marital_status,partnered,False,update
+P000776,2010-12-11 03:10:52.337114144,27.702506006825818,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: no regular medication reported.,False,baseline
+P000776,2010-12-11 03:10:52.337114144,27.702506006825818,employment,unemployed,False,baseline
+P000776,2010-12-11 03:10:52.337114144,27.702506006825818,marital_status,single,False,baseline
+P000776,2011-10-24 09:21:28.847443980,28.57112717500232,employment,unknown/missing,True,update
+P000776,2014-11-19 12:31:23.860385264,31.6434199304288,employment,unemployed,False,update
+P000776,2018-05-18 06:34:37.789676128,35.13631093996898,employment,unknown/missing,True,update
+P000784,2014-11-02 03:03:05.279015504,72.65618635408816,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P000784,2014-11-02 03:03:05.279015504,72.65618635408816,employment,unknown/missing,True,baseline
+P000784,2014-11-02 03:03:05.279015504,72.65618635408816,marital_status,partnered,False,baseline
+P000784,2016-05-01 09:59:18.584128784,74.15187495243927,marital_status,separated,False,update
+P000784,2018-07-28 05:38:59.992976928,76.39098795070501,employment,employed,False,update
+P000800,2006-08-23 10:13:31.484281664,63.49323000156292,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000800,2006-08-23 10:13:31.484281664,63.49323000156292,employment,employed,False,baseline
+P000800,2006-08-23 10:13:31.484281664,63.49323000156292,marital_status,widowed,False,baseline
+P000800,2007-04-19 01:29:59.136768780,64.14659435856696,employment,unknown/missing,True,update
+P000800,2007-09-13 04:32:08.096218148,64.5494130135324,employment,unemployed,False,update
+P000800,2007-10-11 08:39:14.443220748,64.62654423796126,marital_status,single,False,update
+P000800,2007-11-22 14:12:13.814927736,64.74216945334034,employment,employed,False,update
+P000800,2008-11-11 10:40:59.256975416,65.7137248000686,marital_status,married,False,update
+P000800,2015-04-22 00:15:42.419892608,72.15483112627265,employment,unemployed,False,update
+P000800,2015-06-23 02:34:31.275876992,72.32484529164529,marital_status,partnered,False,update
+P000800,2016-04-27 13:17:01.939643904,73.17208017870811,employment,employed,False,update
+P000800,2017-11-02 17:35:33.072831488,74.68937218882327,marital_status,divorced,False,update
+P000800,2018-01-13 15:35:42.983467776,74.88627364846475,marital_status,single,False,update
+P000800,2018-01-17 15:28:20.941723328,74.89721126874745,employment,unemployed,False,update
+P000800,2018-07-15 09:44:32.258716480,75.38664292605685,employment,employed,False,update
+P000802,2010-03-05 17:18:36.459173152,65.57210964034716,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Medication history: antidepressant reported; dose not recorded. Prior care history is incompletely documented.,False,baseline
+P000802,2010-03-05 17:18:36.459173152,65.57210964034716,employment,unknown/missing,True,baseline
+P000802,2010-03-05 17:18:36.459173152,65.57210964034716,marital_status,partnered,False,baseline
+P000819,2009-04-13 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Prior care history is incompletely documented.,False,baseline
+P000819,2009-04-13 21:07:12.000000000,16.0,employment,unemployed,False,baseline
+P000819,2009-04-13 21:07:12.000000000,16.0,marital_status,divorced,False,baseline
+P000819,2010-05-04 01:01:59.755029360,17.054540620875848,employment,employed,False,update
+P000819,2010-08-18 02:06:38.672562576,17.34488168162003,employment,unemployed,False,update
+P000819,2011-03-02 11:41:39.826438824,17.882604753033146,marital_status,unknown/missing,True,update
+P000819,2015-11-03 02:59:59.264947136,22.5552201386543,marital_status,separated,False,update
+P000819,2016-04-29 13:04:57.075532352,23.04371781772626,marital_status,married,False,update
+P000823,2009-04-02 08:31:15.043165952,51.687180531350585,ehr_history,,True,baseline
+P000823,2009-04-02 08:31:15.043165952,51.687180531350585,employment,employed,False,baseline
+P000823,2009-04-02 08:31:15.043165952,51.687180531350585,marital_status,divorced,False,baseline
+P000823,2009-06-14 20:18:28.805027532,51.88839241524424,employment,unemployed,False,update
+P000823,2009-11-22 23:59:42.140263752,52.3296160586188,employment,employed,False,update
+P000823,2011-11-19 08:38:19.211269760,54.31832260641867,employment,unemployed,False,update
+P000823,2012-02-21 13:08:24.944806128,54.57619940432793,employment,employed,False,update
+P000823,2014-02-25 20:48:27.305816864,56.58943573846472,employment,unemployed,False,update
+P000823,2014-03-06 00:26:02.244767424,56.61175268906726,marital_status,widowed,False,update
+P000823,2014-04-18 15:45:51.970165024,56.73123158314415,employment,employed,False,update
+P000823,2014-09-25 15:27:24.098885120,57.16926159721902,employment,unemployed,False,update
+P000823,2016-05-17 10:42:01.636244000,58.8114632121709,employment,employed,False,update
+P000823,2017-03-24 10:56:58.683573600,59.66298071764258,marital_status,married,False,update
+P000823,2018-02-16 02:53:18.908071712,60.5628325228644,marital_status,single,False,update
+P000859,2013-10-02 20:06:28.677618304,45.563804409171645,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: no acute findings documented. Prior care history is incompletely documented.,False,baseline
+P000859,2013-10-02 20:06:28.677618304,45.563804409171645,employment,employed,False,baseline
+P000859,2013-10-02 20:06:28.677618304,45.563804409171645,marital_status,married,False,baseline
+P000859,2013-11-29 19:56:11.790583551,45.72258346720505,employment,unemployed,False,update
+P000859,2014-06-01 19:39:12.110177936,46.2263260441052,marital_status,partnered,False,update
+P000859,2014-08-07 02:49:15.561795920,46.40784558539733,employment,employed,False,update
+P000859,2017-08-04 03:36:58.710576304,49.40046867360878,marital_status,separated,False,update
+P000859,2018-02-25 15:32:22.818189456,49.96309982086321,employment,unemployed,False,update
+P000859,2018-07-03 17:58:59.906165696,50.313830686378246,employment,employed,False,update
+P000868,2010-06-10 21:07:11.999999936,15.999999999999968,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P000868,2010-06-10 21:07:11.999999936,15.999999999999968,employment,unemployed,False,baseline
+P000868,2010-06-10 21:07:11.999999936,15.999999999999968,marital_status,married,False,baseline
+P000868,2011-06-15 15:04:57.986237588,17.012336869106896,employment,employed,False,update
+P000868,2012-11-05 03:36:44.128502336,18.404622985404337,employment,unemployed,False,update
+P000868,2012-12-21 09:56:17.102438768,18.531288354541903,employment,employed,False,update
+P000872,2010-01-03 23:11:47.648719360,64.1791864958542,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000872,2010-01-03 23:11:47.648719360,64.1791864958542,employment,employed,False,baseline
+P000872,2010-01-03 23:11:47.648719360,64.1791864958542,marital_status,married,False,baseline
+P000872,2010-09-14 02:19:59.802771204,64.87223480273921,employment,unemployed,False,update
+P000872,2012-03-10 02:57:17.232299808,66.35898920885323,employment,employed,False,update
+P000872,2012-06-23 17:10:49.321702800,66.6480922910965,employment,unemployed,False,update
+P000872,2013-05-17 17:58:04.959285952,67.5462156471666,employment,unknown/missing,True,update
+P000872,2013-12-15 08:08:37.233395424,68.12553117403085,marital_status,separated,False,update
+P000872,2016-10-03 00:24:14.479332640,70.92552710665251,employment,unemployed,False,update
+P000872,2017-01-23 20:21:58.325588480,71.23444996606733,marital_status,married,False,update
+P000872,2018-03-18 17:48:48.923840128,72.38134180144647,marital_status,single,False,update
+P000872,2018-04-13 17:35:15.709094784,72.45250161387875,marital_status,married,False,update
+P000872,2018-04-19 13:01:21.734663872,72.46840828400232,employment,employed,False,update
+P000872,2018-05-09 06:45:23.299755136,72.52245157579715,marital_status,widowed,False,update
+P000883,2009-07-16 19:48:42.057386752,30.642177421234663,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown.,False,baseline
+P000883,2009-07-16 19:48:42.057386752,30.642177421234663,employment,unemployed,False,baseline
+P000883,2009-07-16 19:48:42.057386752,30.642177421234663,marital_status,single,False,baseline
+P000883,2009-10-27 08:36:31.223724376,30.922903809712796,employment,employed,False,update
+P000883,2011-04-26 06:55:20.411993976,32.417608659163065,employment,unemployed,False,update
+P000883,2011-05-14 08:00:45.588691240,32.46701536918681,marital_status,widowed,False,update
+P000883,2014-10-26 06:04:55.299750816,35.91929585911054,employment,employed,False,update
+P000883,2017-12-11 11:58:48.244168096,39.04665850631479,employment,unemployed,False,update
+P000893,2015-12-20 13:48:45.644100976,23.539362282013165,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Prior care history is incompletely documented.,False,baseline
+P000893,2015-12-20 13:48:45.644100976,23.539362282013165,employment,employed,False,baseline
+P000893,2015-12-20 13:48:45.644100976,23.539362282013165,marital_status,single,False,baseline
+P000893,2018-06-06 21:29:11.970849664,26.001616124740075,employment,unemployed,False,update
+P000893,2018-10-14 17:07:52.194989760,26.35704716333151,employment,employed,False,update
+P000900,2005-09-30 06:42:06.531233344,55.78288189972318,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Prior care history is incompletely documented.,False,baseline
+P000900,2005-09-30 06:42:06.531233344,55.78288189972318,employment,employed,False,baseline
+P000900,2005-09-30 06:42:06.531233344,55.78288189972318,marital_status,single,False,baseline
+P000900,2006-08-30 16:06:01.838051340,56.6984150382474,employment,unknown/missing,True,update
+P000900,2007-01-05 11:26:37.367771920,57.04833589022703,employment,unemployed,False,update
+P000900,2007-09-05 11:23:31.349007344,57.71364139822525,employment,employed,False,update
+P000900,2010-12-02 11:07:09.529395904,60.95529218187472,employment,unemployed,False,update
+P000900,2011-09-30 12:17:57.631795360,61.78227471499133,employment,employed,False,update
+P000900,2013-09-08 05:19:36.284174944,63.72265535290528,employment,unknown/missing,True,update
+P000900,2014-01-07 05:49:43.562961504,64.05399937113576,marital_status,married,False,update
+P000900,2014-11-05 04:59:41.969970848,64.8807521705509,employment,unemployed,False,update
+P000900,2017-01-19 08:25:43.182629568,67.0878969294192,employment,employed,False,update
+P000900,2017-08-06 00:32:56.421235456,67.63184151692582,marital_status,single,False,update
+P000900,2017-10-11 15:01:03.563661760,67.81419395522298,marital_status,widowed,False,update
+P000900,2018-09-27 10:34:34.545187840,68.77469264285054,employment,unemployed,False,update
+P000905,2012-11-30 11:54:26.211712256,19.30086486843571,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown.,False,baseline
+P000905,2012-11-30 11:54:26.211712256,19.30086486843571,employment,unemployed,False,baseline
+P000905,2012-11-30 11:54:26.211712256,19.30086486843571,marital_status,single,False,baseline
+P000905,2013-05-08 15:36:48.104773460,19.736614870307285,employment,employed,False,update
+P000905,2013-11-30 01:24:04.187368424,20.299002393747283,employment,unemployed,False,update
+P000908,2016-05-28 06:09:24.076800592,18.169453250009692,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented.,False,baseline
+P000908,2016-05-28 06:09:24.076800592,18.169453250009692,employment,employed,False,baseline
+P000908,2016-05-28 06:09:24.076800592,18.169453250009692,marital_status,single,False,baseline
+P000908,2016-10-09 12:26:23.874563128,18.53704958180253,employment,unemployed,False,update
+P000908,2018-04-05 01:17:16.834324960,20.02246087753736,employment,employed,False,update
+P000914,2014-05-04 10:30:28.936516400,71.70972117131325,ehr_history,Baseline psychiatric assessment: concentration difficulties reported.,False,baseline
+P000914,2014-05-04 10:30:28.936516400,71.70972117131325,employment,unemployed,False,baseline
+P000914,2014-05-04 10:30:28.936516400,71.70972117131325,marital_status,partnered,False,baseline
+P000914,2016-01-06 23:31:53.530441688,73.38680597322711,marital_status,single,False,update
+P000914,2016-01-23 20:07:59.547425768,73.43296271285723,employment,employed,False,update
+P000914,2016-03-13 12:32:18.920477024,73.56899167322867,employment,unemployed,False,update
+P000936,2004-09-07 18:10:19.392242176,60.31542651496387,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: antipsychotic reported; adherence unknown. Prior care history is incompletely documented.,False,baseline
+P000936,2004-09-07 18:10:19.392242176,60.31542651496387,employment,unemployed,False,baseline
+P000936,2004-09-07 18:10:19.392242176,60.31542651496387,marital_status,widowed,False,baseline
+P000936,2010-04-27 04:58:56.076096672,65.94853444895745,employment,employed,False,update
+P000936,2010-07-28 16:39:46.246247968,66.20175441044648,employment,unemployed,False,update
+P000936,2010-11-07 00:56:46.922614720,66.4792279977678,employment,employed,False,update
+P000936,2011-05-16 08:21:22.862126048,67.00027565596722,employment,unemployed,False,update
+P000936,2013-11-27 17:32:44.079725120,69.53662584649256,employment,employed,False,update
+P000936,2014-06-25 20:53:09.719003392,70.1119673952986,employment,unemployed,False,update
+P000936,2014-08-11 09:50:03.290288960,70.23938824289142,employment,employed,False,update
+P000936,2014-09-14 03:57:22.936010496,70.33180653619559,marital_status,married,False,update
+P000936,2014-10-09 00:03:52.835377024,70.39981024895486,employment,unemployed,False,update
+P000936,2015-06-18 22:32:19.941216064,71.09232665883626,employment,employed,False,update
+P000936,2016-06-12 16:52:48.486994880,72.0773276356663,marital_status,single,False,update
+P000936,2018-08-12 21:50:05.269690496,74.24357730333685,employment,unemployed,False,update
+P000937,2014-01-31 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. Family and social history only partially available.,False,baseline
+P000937,2014-01-31 21:07:11.999999968,15.999999999999968,employment,employed,False,baseline
+P000937,2014-01-31 21:07:11.999999968,15.999999999999968,marital_status,widowed,False,baseline
+P000937,2016-09-26 16:19:53.200687072,18.652485613968235,employment,unknown/missing,True,update
+P000937,2018-01-16 04:19:19.749615680,19.957097242776005,employment,unemployed,False,update
+P000939,2011-07-16 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P000939,2011-07-16 21:07:11.999999968,15.999999999999968,employment,unemployed,False,baseline
+P000939,2011-07-16 21:07:11.999999968,15.999999999999968,marital_status,married,False,baseline
+P000939,2013-01-20 18:05:26.910291616,17.51645491333544,marital_status,unknown/missing,True,update
+P000939,2016-07-01 23:01:14.074626976,20.961304313376843,marital_status,divorced,False,update
+P000939,2018-04-25 07:54:37.916276416,22.77481291337248,employment,employed,False,update
+P000946,2004-03-06 09:34:47.003909696,61.87231539357506,ehr_history,,True,baseline
+P000946,2004-03-06 09:34:47.003909696,61.87231539357506,employment,employed,False,baseline
+P000946,2004-03-06 09:34:47.003909696,61.87231539357506,marital_status,unknown/missing,True,baseline
+P000946,2005-09-16 00:26:33.731943680,63.40176306418767,marital_status,single,False,update
+P000946,2006-05-23 04:50:03.379531376,64.0840028967161,employment,unknown/missing,True,update
+P000946,2009-07-13 12:11:18.829633504,67.22522120734705,marital_status,divorced,False,update
+P000946,2010-02-19 19:06:49.077320288,67.83108866399137,employment,employed,False,update
+P000946,2011-05-04 02:13:54.664297568,69.03110397557714,employment,unknown/missing,True,update
+P000946,2013-08-31 02:10:29.374721472,71.35831842614968,employment,employed,False,update
+P000946,2016-02-29 17:57:32.786893440,73.85709027877257,employment,unemployed,False,update
+P000946,2016-06-05 15:16:15.242423232,74.12236058927436,employment,employed,False,update
+P000946,2017-02-14 05:52:06.341283648,74.81671634007249,marital_status,single,False,update
+P000946,2017-07-16 23:15:18.858773056,75.23486168305395,employment,unemployed,False,update
+P000946,2018-05-02 11:47:33.607749888,76.02754707133153,marital_status,married,False,update
+P000946,2018-05-04 03:29:54.165206144,76.03207667727877,employment,employed,False,update
+P000946,2018-06-10 03:07:22.088556352,76.13333639093395,marital_status,partnered,False,update
+P000961,2008-04-30 03:56:11.111803712,27.981858676078826,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P000961,2008-04-30 03:56:11.111803712,27.981858676078826,employment,employed,False,baseline
+P000961,2008-04-30 03:56:11.111803712,27.981858676078826,marital_status,married,False,baseline
+P000961,2009-02-20 16:49:45.007960632,28.79374994796582,employment,unemployed,False,update
+P000961,2010-12-21 13:36:19.837230960,30.625041982420555,employment,employed,False,update
+P000961,2011-04-03 11:57:58.767244896,30.906859406676677,employment,unknown/missing,True,update
+P000961,2012-10-02 04:54:30.033021072,32.40642727577177,employment,unemployed,False,update
+P000961,2012-11-01 17:38:08.488552160,32.49001641503753,employment,employed,False,update
+P000961,2012-12-02 13:31:43.204127872,32.57442300524231,employment,unemployed,False,update
+P000961,2013-02-15 20:12:10.341522464,32.78052742044041,employment,employed,False,update
+P000961,2013-04-12 11:46:37.109101824,32.93288899096152,employment,unemployed,False,update
+P000961,2016-01-25 11:44:26.342663648,35.720074180252354,marital_status,single,False,update
+P000961,2018-05-03 18:26:29.738708928,37.990563529035,employment,unknown/missing,True,update
+P000962,2015-03-25 21:07:11.999999952,15.999999999999968,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded. Prior care history is incompletely documented.,False,baseline
+P000962,2015-03-25 21:07:11.999999952,15.999999999999968,employment,unemployed,False,baseline
+P000962,2015-03-25 21:07:11.999999952,15.999999999999968,marital_status,divorced,False,baseline
+P000962,2015-10-06 02:07:42.624910906,16.531725327113655,employment,employed,False,update
+P000962,2015-10-26 18:11:27.320482444,16.58831585891063,marital_status,married,False,update
+P000962,2017-02-05 14:18:17.243421592,17.869213010287577,employment,unknown/missing,True,update
+P000962,2017-03-05 04:18:47.157901216,17.944734559849135,employment,unemployed,False,update
+P000964,2004-06-16 18:00:15.012835840,61.00262202169699,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. Medication history: no regular medication reported.,False,baseline
+P000964,2004-06-16 18:00:15.012835840,61.00262202169699,employment,employed,False,baseline
+P000964,2004-06-16 18:00:15.012835840,61.00262202169699,marital_status,married,False,baseline
+P000964,2005-07-02 09:51:49.848063500,62.044835947656246,employment,unemployed,False,update
+P000964,2005-11-19 09:52:19.278972624,62.42814386126302,employment,employed,False,update
+P000964,2008-09-03 00:16:55.203965824,65.21697707699923,employment,unemployed,False,update
+P000964,2014-07-12 09:46:23.684044416,71.07170501397104,employment,employed,False,update
+P000964,2015-04-08 19:51:17.811400128,71.81209002096905,employment,unemployed,False,update
+P000964,2015-04-16 11:08:53.822113920,71.8330000255447,employment,unknown/missing,True,update
+P000964,2015-05-05 16:58:51.655055808,71.8856856535148,marital_status,divorced,False,update
+P000964,2016-09-24 08:23:00.466334656,73.2755616089391,employment,employed,False,update
+P000971,2011-04-28 23:12:04.862459936,22.82310170077449,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded.,False,baseline
+P000971,2011-04-28 23:12:04.862459936,22.82310170077449,employment,employed,False,baseline
+P000971,2011-04-28 23:12:04.862459936,22.82310170077449,marital_status,single,False,baseline
+P000971,2011-08-05 13:07:46.065582969,23.093005498933547,employment,unemployed,False,update
+P000971,2012-06-01 18:02:32.672951752,23.91767597431307,employment,employed,False,update
+P000971,2012-08-15 23:47:25.085402928,24.123674716284448,employment,unemployed,False,update
+P000971,2014-01-31 05:32:53.862304048,25.58363601980011,employment,unknown/missing,True,update
+P000971,2014-02-21 11:05:22.431881216,25.64176421195178,marital_status,married,False,update
+P000971,2018-08-23 17:46:55.967016352,30.14364682517549,marital_status,separated,False,update
+P000995,2005-05-07 23:32:54.773758912,40.09385870897031,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented.,False,baseline
+P000995,2005-05-07 23:32:54.773758912,40.09385870897031,employment,employed,False,baseline
+P000995,2005-05-07 23:32:54.773758912,40.09385870897031,marital_status,single,False,baseline
+P000995,2006-05-09 10:29:06.866145840,41.097180325468216,employment,unknown/missing,True,update
+P000995,2007-10-12 16:46:45.021011024,42.5243478844538,marital_status,partnered,False,update
+P000995,2009-01-25 21:40:03.132018048,43.814459746683305,employment,unemployed,False,update
+P000995,2009-09-29 11:37:33.431675040,44.4895772390082,employment,employed,False,update
+P000995,2015-01-25 04:37:34.279784384,49.811269931259,employment,unknown/missing,True,update
+P000995,2016-10-29 21:47:26.459010752,51.57370225296188,employment,employed,False,update
+P000995,2018-01-17 14:39:37.824844608,52.79125746443584,employment,unemployed,False,update
+P001010,2013-01-18 16:43:20.775915264,53.371928973872855,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P001010,2013-01-18 16:43:20.775915264,53.371928973872855,employment,unemployed,False,baseline
+P001010,2013-01-18 16:43:20.775915264,53.371928973872855,marital_status,separated,False,baseline
+P001010,2013-12-28 13:06:41.786545100,54.3133570627019,employment,employed,False,update
+P001010,2014-12-29 07:10:33.694865176,55.314753899390055,employment,unemployed,False,update
+P001010,2017-12-12 11:57:02.920607104,58.269500264810326,employment,employed,False,update
+P001010,2018-01-10 15:13:02.885532704,58.34927222646637,employment,unemployed,False,update
+P001031,2009-09-06 08:08:07.580363968,64.7825457788307,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. Family and social history only partially available.,False,baseline
+P001031,2009-09-06 08:08:07.580363968,64.7825457788307,employment,employed,False,baseline
+P001031,2009-09-06 08:08:07.580363968,64.7825457788307,marital_status,single,False,baseline
+P001031,2010-01-18 14:59:56.315754930,65.15020830642179,employment,unemployed,False,update
+P001031,2012-08-30 13:49:45.743292880,67.76477607036611,employment,employed,False,update
+P001031,2013-05-01 20:46:56.994434800,68.43361858884323,employment,unemployed,False,update
+P001031,2014-08-23 05:52:21.407831872,69.74337513356267,employment,employed,False,update
+P001031,2016-07-02 15:14:56.776065728,71.60348365634503,marital_status,widowed,False,update
+P001032,2003-11-10 19:21:19.628130240,51.918400726031145,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown. Family and social history only partially available.,False,baseline
+P001032,2003-11-10 19:21:19.628130240,51.918400726031145,employment,unemployed,False,baseline
+P001032,2003-11-10 19:21:19.628130240,51.918400726031145,marital_status,widowed,False,baseline
+P001032,2004-07-27 18:05:20.681408324,52.63011208057762,employment,employed,False,update
+P001032,2004-10-29 02:50:34.826997440,52.88573607574639,marital_status,separated,False,update
+P001032,2004-11-19 19:03:01.382502980,52.94508105163334,employment,unemployed,False,update
+P001032,2005-01-25 03:15:41.474477576,53.1267196361194,employment,employed,False,update
+P001032,2008-06-02 13:33:13.657541616,56.479091949613554,employment,unemployed,False,update
+P001032,2008-08-07 06:04:46.660816480,56.65894116329157,marital_status,partnered,False,update
+P001032,2010-07-19 11:03:57.086218720,58.60616187159705,marital_status,married,False,update
+P001032,2010-11-06 13:52:55.986294112,58.90765293131903,marital_status,widowed,False,update
+P001032,2011-05-30 12:43:29.592887776,59.468791840000506,employment,employed,False,update
+P001032,2011-07-05 20:10:00.289874016,59.5682054556433,employment,unemployed,False,update
+P001032,2012-04-05 01:49:02.668444416,60.31903659987327,marital_status,married,False,update
+P001032,2016-02-20 05:00:23.475039360,64.19627673404703,employment,employed,False,update
+P001032,2017-07-29 02:48:37.495848448,65.63342738220878,employment,unemployed,False,update
+P001061,2014-02-16 23:54:10.034976064,45.46841057510802,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. Medication history: antipsychotic reported; adherence unknown. Family and social history only partially available.,False,baseline
+P001061,2014-02-16 23:54:10.034976064,45.46841057510802,employment,employed,False,baseline
+P001061,2014-02-16 23:54:10.034976064,45.46841057510802,marital_status,married,False,baseline
+P001061,2014-10-31 04:57:43.339506744,46.16989192554169,employment,unemployed,False,update
+P001061,2018-02-27 18:58:12.848046128,49.49804698654186,employment,employed,False,update
+P001061,2018-05-22 18:44:17.058724944,49.72800469001965,employment,unemployed,False,update
+P001061,2018-07-26 22:25:58.570474624,49.906390153601485,marital_status,single,False,update
+P001062,2016-03-14 06:34:16.883624112,18.076411716937173,ehr_history,Baseline psychiatric assessment: mood stable at intake. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P001062,2016-03-14 06:34:16.883624112,18.076411716937173,employment,unemployed,False,baseline
+P001062,2016-03-14 06:34:16.883624112,18.076411716937173,marital_status,married,False,baseline
+P001088,2017-03-23 10:57:13.517297408,57.839535121050254,ehr_history,Baseline psychiatric assessment: concentration difficulties reported. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P001088,2017-03-23 10:57:13.517297408,57.839535121050254,employment,unemployed,False,baseline
+P001088,2017-03-23 10:57:13.517297408,57.839535121050254,marital_status,married,False,baseline
+P001089,2006-09-28 23:44:45.972568832,46.92495922839975,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented.,False,baseline
+P001089,2006-09-28 23:44:45.972568832,46.92495922839975,employment,unemployed,False,baseline
+P001089,2006-09-28 23:44:45.972568832,46.92495922839975,marital_status,widowed,False,baseline
+P001089,2006-10-17 11:35:40.074108587,46.97559320919548,employment,employed,False,update
+P001089,2007-06-01 14:46:54.247816220,47.59746170187207,employment,unemployed,False,update
+P001089,2008-03-11 02:16:24.733265648,48.373600363345126,marital_status,partnered,False,update
+P001089,2008-09-21 21:11:40.511935536,48.90691282579936,employment,employed,False,update
+P001089,2010-04-29 09:33:28.654801152,50.507260924781335,employment,unknown/missing,True,update
+P001089,2014-02-09 03:57:03.779016192,54.29040877518892,marital_status,widowed,False,update
+P001089,2014-04-21 02:51:14.159419424,54.484675014222496,employment,employed,False,update
+P001089,2014-05-27 12:32:15.960368768,54.58434439296824,employment,unemployed,False,update
+P001089,2016-04-08 18:32:34.963896448,56.45228205068397,employment,unknown/missing,True,update
+P001090,2017-02-22 03:43:30.533150832,22.163782184450195,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported. Prior care history is incompletely documented.,False,baseline
+P001090,2017-02-22 03:43:30.533150832,22.163782184450195,employment,employed,False,baseline
+P001090,2017-02-22 03:43:30.533150832,22.163782184450195,marital_status,divorced,False,baseline
+P001090,2018-05-12 03:30:46.836034384,23.37938869495487,employment,unemployed,False,update
+P001101,2008-11-28 21:07:11.999999936,15.999999999999968,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: no acute findings documented. Family and social history only partially available.,False,baseline
+P001101,2008-11-28 21:07:11.999999936,15.999999999999968,employment,employed,False,baseline
+P001101,2008-11-28 21:07:11.999999936,15.999999999999968,marital_status,divorced,False,baseline
+P001101,2008-12-24 23:46:32.116987839,16.071488530228994,marital_status,single,False,update
+P001101,2009-01-05 09:42:04.835409140,16.102737832076055,employment,unknown/missing,True,update
+P001101,2010-06-23 09:31:29.594520520,17.564760043825512,marital_status,widowed,False,update
+P001101,2010-07-30 03:29:45.837199392,17.665374838393724,employment,employed,False,update
+P001101,2010-09-01 05:08:21.168945320,17.75591321902522,employment,unemployed,False,update
+P001101,2010-11-09 11:32:03.424707000,17.945558348750097,marital_status,single,False,update
+P001101,2011-06-10 05:35:23.927144352,18.52805441815621,employment,unknown/missing,True,update
+P001101,2012-07-21 00:52:10.502293408,19.64184406980409,employment,employed,False,update
+P001101,2012-08-21 07:11:03.370239232,19.727439562928584,employment,unemployed,False,update
+P001101,2014-01-07 16:14:29.706786976,21.10837794812332,employment,employed,False,update
+P001101,2014-06-22 11:17:59.436584672,21.562306760063,employment,unknown/missing,True,update
+P001101,2014-07-19 14:20:44.342905920,21.63657771330086,marital_status,married,False,update
+P001101,2015-02-15 12:31:50.517621408,22.214069043094543,employment,employed,False,update
+P001101,2015-07-26 19:32:32.199520928,22.65567194827688,employment,unemployed,False,update
+P001101,2016-12-05 06:42:56.865579264,24.01768639967441,marital_status,single,False,update
+P001101,2017-09-16 11:12:19.221216256,24.79850206132757,employment,employed,False,update
+P001103,2016-11-15 11:12:19.383367560,76.74207380305192,ehr_history,Baseline psychiatric assessment: mood stable at intake. Medication history: antidepressant reported; dose not recorded. Prior care history is incompletely documented.,False,baseline
+P001103,2016-11-15 11:12:19.383367560,76.74207380305192,employment,unemployed,False,baseline
+P001103,2016-11-15 11:12:19.383367560,76.74207380305192,marital_status,married,False,baseline
+P001103,2017-09-12 10:49:44.212369972,77.56614086849609,employment,unknown/missing,True,update
+P001104,2013-05-29 08:56:30.117948512,23.054197063073392,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: no acute findings documented. Medication history: no regular medication reported.,False,baseline
+P001104,2013-05-29 08:56:30.117948512,23.054197063073392,employment,unemployed,False,baseline
+P001104,2013-05-29 08:56:30.117948512,23.054197063073392,marital_status,divorced,False,baseline
+P001104,2013-07-03 07:04:33.331010585,23.14981096181311,marital_status,partnered,False,update
+P001104,2016-02-24 04:58:17.508935408,25.79438906231929,marital_status,widowed,False,update
+P001104,2016-03-21 16:37:22.638982208,25.86690383275868,employment,employed,False,update
+P001104,2016-11-30 23:20:27.205508528,26.563098590938317,employment,unemployed,False,update
+P001104,2018-02-06 06:19:34.211134400,27.74667129484285,employment,employed,False,update
+P001118,2011-12-05 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antipsychotic reported; adherence unknown.,False,baseline
+P001118,2011-12-05 21:07:12.000000000,16.0,employment,unknown/missing,True,baseline
+P001118,2011-12-05 21:07:12.000000000,16.0,marital_status,partnered,False,baseline
+P001118,2014-05-05 09:52:20.903234880,18.413550868386626,employment,unemployed,False,update
+P001118,2017-02-19 20:09:28.242750240,21.21012727220139,marital_status,single,False,update
+P001118,2017-05-08 14:21:24.040599168,21.423022224725607,employment,employed,False,update
+P001124,2008-02-28 21:07:12.000000000,16.0,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Prior care history is incompletely documented.,False,baseline
+P001124,2008-02-28 21:07:12.000000000,16.0,employment,unemployed,False,baseline
+P001124,2008-02-28 21:07:12.000000000,16.0,marital_status,partnered,False,baseline
+P001124,2010-02-05 11:01:01.956472120,17.937285640149028,employment,employed,False,update
+P001124,2011-03-23 18:00:23.631966736,19.06336276177645,marital_status,widowed,False,update
+P001124,2011-10-21 00:50:32.882063904,19.6418409763422,marital_status,single,False,update
+P001124,2012-11-29 00:29:49.972231264,20.75065392792787,employment,unemployed,False,update
+P001124,2016-12-02 17:12:15.141766080,24.76085571070888,employment,employed,False,update
+P001125,2005-01-22 16:51:36.299302208,45.922099710368165,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: no acute findings documented. Medication history: antidepressant reported; dose not recorded. Prior care history is incompletely documented.,False,baseline
+P001125,2005-01-22 16:51:36.299302208,45.922099710368165,employment,employed,False,baseline
+P001125,2005-01-22 16:51:36.299302208,45.922099710368165,marital_status,widowed,False,baseline
+P001125,2006-03-20 05:14:21.005364704,47.076170759627374,employment,unemployed,False,update
+P001125,2009-12-25 05:14:05.550209824,50.8435303114892,employment,employed,False,update
+P001125,2010-04-04 18:13:18.526902240,51.11880255504087,employment,unemployed,False,update
+P001125,2011-02-20 12:31:21.374899776,51.99975844862646,employment,employed,False,update
+P001125,2011-09-14 01:33:11.281452192,52.562515900821225,employment,unemployed,False,update
+P001125,2012-01-12 19:07:49.233146784,52.89306994012434,employment,employed,False,update
+P001125,2012-05-21 16:55:53.322524736,53.2487470058111,marital_status,single,False,update
+P001125,2014-01-09 04:16:26.061597984,54.88457142697425,employment,unemployed,False,update
+P001125,2015-05-01 04:20:55.789003456,56.19056161662899,marital_status,separated,False,update
+P001125,2016-03-26 00:16:48.494163456,57.09360677463918,employment,employed,False,update
+P001125,2018-07-23 02:33:39.330059456,59.41835001460405,employment,unemployed,False,update
+P001172,2011-10-20 21:07:11.999999968,15.999999999999968,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: mild fatigue; further examination not recorded. Medication history: antidepressant reported; dose not recorded.,False,baseline
+P001172,2011-10-20 21:07:11.999999968,15.999999999999968,employment,unemployed,False,baseline
+P001172,2011-10-20 21:07:11.999999968,15.999999999999968,marital_status,unknown/missing,True,baseline
+P001172,2013-09-20 19:18:51.677967848,17.919066824893825,employment,employed,False,update
+P001172,2015-07-28 23:56:48.027236720,19.770420414089287,employment,unemployed,False,update
+P001182,2007-07-22 21:07:12.000000000,16.0,ehr_history,,True,baseline
+P001182,2007-07-22 21:07:12.000000000,16.0,employment,unknown/missing,True,baseline
+P001182,2007-07-22 21:07:12.000000000,16.0,marital_status,married,False,baseline
+P001182,2012-05-20 14:44:54.937391040,20.8289411137486,employment,unemployed,False,update
+P001182,2012-10-11 07:06:00.034441600,21.22232717641557,employment,employed,False,update
+P001182,2014-01-24 01:23:36.658140512,22.508492476020518,employment,unknown/missing,True,update
+P001182,2014-05-27 02:09:38.391585248,22.845342553729058,employment,employed,False,update
+P001182,2014-06-20 15:38:39.089330560,22.912590515374568,employment,unemployed,False,update
+P001182,2014-09-07 09:41:35.973158688,23.12820629740029,employment,employed,False,update
+P001182,2015-04-19 19:09:40.340395552,23.742577557566257,employment,unemployed,False,update
+P001182,2016-11-09 02:11:16.438490752,25.301248245980496,employment,employed,False,update
+P001182,2017-07-24 14:28:01.480954112,26.006291148807847,employment,unemployed,False,update
+P001201,2010-06-04 08:45:44.317540896,24.35194451978569,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Family and social history only partially available.,False,baseline
+P001201,2010-06-04 08:45:44.317540896,24.35194451978569,employment,employed,False,baseline
+P001201,2010-06-04 08:45:44.317540896,24.35194451978569,marital_status,widowed,False,baseline
+P001201,2011-08-27 13:40:40.655998864,25.58182554056545,employment,unemployed,False,update
+P001201,2013-08-04 05:43:10.070629296,27.51935580060547,employment,employed,False,update
+P001201,2013-09-14 04:23:12.657684960,27.631457963927694,marital_status,single,False,update
+P001201,2014-11-22 08:00:52.431772688,28.820123452726733,employment,unemployed,False,update
+P001201,2015-03-15 15:46:15.857393312,29.130391802649143,employment,employed,False,update
+P001201,2015-08-02 12:34:15.574418336,29.51333372039281,employment,unemployed,False,update
+P001201,2017-08-28 01:47:03.629322112,31.58469878932925,employment,unknown/missing,True,update
+P001201,2018-01-21 06:14:04.565998720,31.984940895622557,employment,employed,False,update
+P001239,2010-08-26 19:38:31.224578784,16.815727679421574,ehr_history,Baseline psychiatric assessment: persistent anxiety reported. General physical examination: mild fatigue; further examination not recorded. Medication history: no regular medication reported. Family and social history only partially available.,False,baseline
+P001239,2010-08-26 19:38:31.224578784,16.815727679421574,employment,employed,False,baseline
+P001239,2010-08-26 19:38:31.224578784,16.815727679421574,marital_status,single,False,baseline
+P001239,2010-11-02 03:37:36.918869023,17.000078363679364,employment,unemployed,False,update
+P001239,2011-01-19 07:23:05.709008918,17.214063820517524,employment,employed,False,update
+P001239,2013-06-30 01:04:01.053812816,19.65829402832733,employment,unknown/missing,True,update
+P001239,2014-10-21 17:03:42.651042592,20.96883826584525,employment,unemployed,False,update
+P001239,2016-01-06 10:32:39.119654880,22.17824963322358,marital_status,widowed,False,update
+P001239,2016-12-30 06:35:50.725275040,23.160708002638348,employment,employed,False,update
+P001239,2017-11-17 04:48:05.747314816,24.042109191892614,employment,unemployed,False,update
+P001239,2018-02-05 02:38:46.073503200,24.26089585817738,employment,employed,False,update
+P001256,2004-09-04 07:32:32.044672448,62.23348668289231,ehr_history,Baseline psychiatric assessment: low mood and disturbed sleep reported. General physical examination: no acute findings documented. Prior care history is incompletely documented.,False,baseline
+P001256,2004-09-04 07:32:32.044672448,62.23348668289231,employment,unemployed,False,baseline
+P001256,2004-09-04 07:32:32.044672448,62.23348668289231,marital_status,single,False,baseline
+P001256,2005-01-31 17:47:41.323315410,62.64260443541299,marital_status,partnered,False,update
+P001256,2005-09-24 03:54:31.421451540,63.28716637213414,employment,employed,False,update
+P001256,2007-01-08 23:10:50.652436384,64.5789191127342,employment,unemployed,False,update
+P001256,2008-09-24 04:02:41.372416496,66.28792797772155,employment,employed,False,update
+P001256,2011-09-25 21:14:20.012837216,69.29063554721117,marital_status,married,False,update
+P001256,2012-02-29 14:42:19.911152640,69.71974162495643,marital_status,single,False,update
+P001256,2012-06-09 15:50:17.243486656,69.9963994381804,employment,unemployed,False,update
+P001256,2012-09-12 22:28:52.808157536,70.25725845791942,employment,employed,False,update
+P001256,2013-05-05 03:47:32.622304224,70.89853458034553,employment,unemployed,False,update
+P001256,2015-06-06 15:03:31.136776640,72.9861049678301,employment,unknown/missing,True,update
+P001256,2015-09-16 09:30:20.662828224,73.26473800964135,employment,unemployed,False,update
+P001256,2017-02-11 19:53:06.135927616,74.67320627593968,marital_status,widowed,False,update
+P001277,2016-12-11 03:28:38.159377304,24.638821840568664,ehr_history,Baseline psychiatric assessment: mood stable at intake. General physical examination: mild fatigue; further examination not recorded. Medication history: antidepressant reported; dose not recorded. Family and social history only partially available.,False,baseline
+P001277,2016-12-11 03:28:38.159377304,24.638821840568664,employment,unemployed,False,baseline
+P001277,2016-12-11 03:28:38.159377304,24.638821840568664,marital_status,divorced,False,baseline
+P001277,2016-12-31 20:56:50.478145781,24.69557295895197,employment,employed,False,update
+P001277,2018-02-14 15:22:24.372471088,25.817478962241687,marital_status,single,False,update

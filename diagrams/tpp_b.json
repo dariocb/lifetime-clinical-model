@@ -1,0 +1,220 @@
+{
+  "version": 2,
+  "title": "TPP-B: dynamic feature flow → marked timing predictions",
+  "description": "Input-to-output paths for the implemented mark-conditioned TPP. Feature density is an additional objective for B/C. Context refreshes at visit origins.",
+  "diagrams": [
+    {
+      "id": "tpp_b",
+      "title": "TPP-B: dynamic feature flow → marked timing predictions",
+      "kind": "flowchart",
+      "accessibility": "TPP-B: dynamic feature flow → marked timing predictions; arrows follow causal inputs to predictions and likelihood contributions.",
+      "styles": [
+        {
+          "name": "input",
+          "definition": "fill:#EFF6FF,stroke:#3B82F6,color:#172554"
+        },
+        {
+          "name": "history",
+          "definition": "fill:#F3E8FF,stroke:#8B5CF6,color:#3B0764"
+        },
+        {
+          "name": "flow",
+          "definition": "fill:#FFF7ED,stroke:#F59E0B,color:#78350F"
+        },
+        {
+          "name": "latent",
+          "definition": "fill:#ECFEFF,stroke:#06B6D4,color:#164E63"
+        },
+        {
+          "name": "context",
+          "definition": "fill:#EEF2FF,stroke:#6366F1,color:#312E81"
+        },
+        {
+          "name": "output",
+          "definition": "fill:#ECFDF5,stroke:#10B981,color:#064E3B"
+        },
+        {
+          "name": "loss",
+          "definition": "fill:#FFF1F2,stroke:#F43F5E,color:#881337"
+        },
+        {
+          "name": "private",
+          "definition": "fill:#F1F5F9,stroke:#64748B,color:#334155"
+        }
+      ],
+      "data": {
+        "direction": "TB",
+        "nodes": [
+          {
+            "id": "past",
+            "label": "Past observed snapshots + gaps\nAvailable history only",
+            "class": "input"
+          },
+          {
+            "id": "encoder",
+            "label": "Two causal Transformer summaries\nFeature state H^x; timing state H^τ",
+            "class": "history"
+          },
+          {
+            "id": "phys",
+            "label": "Current observed physiology\nx_n: BP, glucose, creatinine",
+            "class": "input"
+          },
+          {
+            "id": "other",
+            "label": "Current context q_n\nBaseline + dynamic covariates\nAge, masks, staleness, prior mark",
+            "class": "input"
+          },
+          {
+            "id": "feature_flow",
+            "label": "Invertible feature flow\nz_n^x = F_x(x_n; H^x)",
+            "class": "flow"
+          },
+          {
+            "id": "latent",
+            "label": "All current feature latents\nz_n^x",
+            "class": "latent"
+          },
+          {
+            "id": "context",
+            "label": "Timing / mark context\nc_n^B = [z_n^x, q_n, H_n^τ]",
+            "class": "context"
+          },
+          {
+            "id": "feature_loss",
+            "label": "Feature-snapshot log density\nlog φ_3(z_n^x) + log |det J_Fx|\nAdded to event + censoring terms",
+            "class": "loss"
+          },
+          {
+            "id": "heads",
+            "label": "Conditioning network\nMark logits + flow parameters",
+            "class": "context"
+          },
+          {
+            "id": "marks",
+            "label": "Mark probabilities\nπ_k = P(m = k | c_n)",
+            "class": "output"
+          },
+          {
+            "id": "timing",
+            "label": "One timing flow per mark\nz = F_τ,k(τ; c_n)\nf_k(τ), S_k(τ)",
+            "class": "flow"
+          },
+          {
+            "id": "joint",
+            "label": "Joint next-event prediction\np(τ, m=k | c_n) = π_k f_k(τ)",
+            "class": "output"
+          },
+          {
+            "id": "mixture",
+            "label": "Forecast when the mark is unknown\nf(τ) = Σ_k π_k f_k(τ)\nS(τ) = Σ_k π_k S_k(τ)",
+            "class": "output"
+          },
+          {
+            "id": "event_loss",
+            "label": "Observed visit (τ, m)\nlog π_m + log f_m(τ)",
+            "class": "loss"
+          },
+          {
+            "id": "censor_loss",
+            "label": "Right-censored wait c\nlog S(c) = log Σ_k π_k S_k(c)",
+            "class": "loss"
+          }
+        ],
+        "edges": [
+          {
+            "from": "past",
+            "to": "encoder",
+            "arrow": "-->"
+          },
+          {
+            "from": "phys",
+            "to": "feature_flow",
+            "arrow": "-->"
+          },
+          {
+            "from": "encoder",
+            "to": "feature_flow",
+            "arrow": "-->",
+            "label": "feature-history state"
+          },
+          {
+            "from": "feature_flow",
+            "to": "latent",
+            "arrow": "-->"
+          },
+          {
+            "from": "latent",
+            "to": "context",
+            "arrow": "-->"
+          },
+          {
+            "from": "other",
+            "to": "context",
+            "arrow": "-->"
+          },
+          {
+            "from": "encoder",
+            "to": "context",
+            "arrow": "-->",
+            "label": "timing-history state"
+          },
+          {
+            "from": "feature_flow",
+            "to": "feature_loss",
+            "arrow": "-->",
+            "label": "full flow Jacobian"
+          },
+          {
+            "from": "latent",
+            "to": "feature_loss",
+            "arrow": "-->"
+          },
+          {
+            "from": "context",
+            "to": "heads",
+            "arrow": "-->"
+          },
+          {
+            "from": "heads",
+            "to": "marks",
+            "arrow": "-->"
+          },
+          {
+            "from": "heads",
+            "to": "timing",
+            "arrow": "-->"
+          },
+          {
+            "from": "marks",
+            "to": "joint",
+            "arrow": "-->"
+          },
+          {
+            "from": "timing",
+            "to": "joint",
+            "arrow": "-->"
+          },
+          {
+            "from": "joint",
+            "to": "mixture",
+            "arrow": "-->",
+            "label": "sum over marks"
+          },
+          {
+            "from": "joint",
+            "to": "event_loss",
+            "arrow": "-->",
+            "label": "known mark"
+          },
+          {
+            "from": "mixture",
+            "to": "censor_loss",
+            "arrow": "-->",
+            "label": "no next mark observed"
+          }
+        ]
+      }
+    }
+  ]
+}

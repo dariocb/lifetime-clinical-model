@@ -1,0 +1,178 @@
+{
+  "version": 2,
+  "title": "GP-A: deep-kernel GP + Gaussian observation noise",
+  "description": "Input-to-output paths for the implemented GP. Internal values are standardized; forecasts return clinical units. Only available measurements condition a forecast.",
+  "diagrams": [
+    {
+      "id": "gp_a",
+      "title": "GP-A: deep-kernel GP + Gaussian observation noise",
+      "kind": "flowchart",
+      "accessibility": "GP-A: deep-kernel GP + Gaussian observation noise; arrows follow patient context and measurements to predictive distributions and training objectives.",
+      "styles": [
+        {
+          "name": "input",
+          "definition": "fill:#EFF6FF,stroke:#3B82F6,color:#172554"
+        },
+        {
+          "name": "history",
+          "definition": "fill:#F3E8FF,stroke:#8B5CF6,color:#3B0764"
+        },
+        {
+          "name": "flow",
+          "definition": "fill:#FFF7ED,stroke:#F59E0B,color:#78350F"
+        },
+        {
+          "name": "latent",
+          "definition": "fill:#ECFEFF,stroke:#06B6D4,color:#164E63"
+        },
+        {
+          "name": "context",
+          "definition": "fill:#EEF2FF,stroke:#6366F1,color:#312E81"
+        },
+        {
+          "name": "output",
+          "definition": "fill:#ECFDF5,stroke:#10B981,color:#064E3B"
+        },
+        {
+          "name": "loss",
+          "definition": "fill:#FFF1F2,stroke:#F43F5E,color:#881337"
+        },
+        {
+          "name": "private",
+          "definition": "fill:#F1F5F9,stroke:#64748B,color:#334155"
+        }
+      ],
+      "data": {
+        "direction": "TB",
+        "nodes": [
+          {
+            "id": "baseline",
+            "label": "Patient baseline\ns: entry covariates",
+            "class": "input"
+          },
+          {
+            "id": "past",
+            "label": "Recorded causal prefix\nEvents / measurements / updates",
+            "class": "input"
+          },
+          {
+            "id": "encoder",
+            "label": "Common causal Transformer\nH₀ = E(prefix)",
+            "class": "history"
+          },
+          {
+            "id": "query",
+            "label": "Query age t + feature ID d\nArbitrary, irregular times",
+            "class": "input"
+          },
+          {
+            "id": "context",
+            "label": "Fixed prefix + query context\ncₜd = [s, H₀, t, e_d]",
+            "class": "context"
+          },
+          {
+            "id": "prior",
+            "label": "Multi-output GP prior\nf ∼ GP(mθ, kθ)\nLearned mean + PSD cross-feature kernel",
+            "class": "latent"
+          },
+          {
+            "id": "observed",
+            "label": "Available measurements D\nIrregular (t, d, y) records",
+            "class": "input"
+          },
+          {
+            "id": "posterior",
+            "label": "Exact Gaussian conditioning\np(f* | D)",
+            "class": "latent"
+          },
+          {
+            "id": "noise",
+            "label": "Independent Gaussian noise\nεG ∼ N(0, Σ)",
+            "class": "private"
+          },
+          {
+            "id": "observation",
+            "label": "Predictive observation distribution\ny* = f* + εG",
+            "class": "output"
+          },
+          {
+            "id": "output",
+            "label": "Return clinical units\nMean / quantiles / joint samples",
+            "class": "output"
+          },
+          {
+            "id": "loss",
+            "label": "Train: exact marginal NLL\n−log N(y; m, K + Σ)",
+            "class": "loss"
+          }
+        ],
+        "edges": [
+          {
+            "from": "past",
+            "to": "encoder"
+          },
+          {
+            "from": "baseline",
+            "to": "context"
+          },
+          {
+            "from": "encoder",
+            "to": "context"
+          },
+          {
+            "from": "query",
+            "to": "context"
+          },
+          {
+            "from": "context",
+            "to": "prior"
+          },
+          {
+            "from": "prior",
+            "to": "posterior"
+          },
+          {
+            "from": "observed",
+            "to": "posterior",
+            "label": "Condition on known y"
+          },
+          {
+            "from": "noise",
+            "to": "posterior",
+            "label": "Noise in conditioning covariance"
+          },
+          {
+            "from": "posterior",
+            "to": "observation",
+            "label": "Joint latent draws f*"
+          },
+          {
+            "from": "noise",
+            "to": "observation",
+            "label": "Future noise"
+          },
+          {
+            "from": "observation",
+            "to": "output",
+            "label": "Undo training standardisation"
+          },
+          {
+            "from": "prior",
+            "to": "loss",
+            "arrow": "-.->"
+          },
+          {
+            "from": "observed",
+            "to": "loss",
+            "arrow": "-.->"
+          },
+          {
+            "from": "noise",
+            "to": "loss",
+            "arrow": "-.->"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.35", ranksep="0.55", splines=polyline, fontname="Segoe UI", fontsize=21, fontcolor="#0f172a", labelloc=t, label="GP-B: Gaussian-space GP + invertible observation flow"];
+node [shape=box, style="rounded,filled", fontname="Segoe UI", fontsize=15, margin="0.18,0.13", penwidth=1.3];
+edge [color="#64748b", penwidth=1.35, arrowsize=0.75, fontname="Segoe UI", fontsize=11, fontcolor="#475569"];
+baseline [label="Patient baseline\ns: entry covariates", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+past [label="Recorded causal prefix\nEvents / measurements / updates", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+encoder [label="Common causal Transformer\nH₀ = E(prefix)", fillcolor="#F3E8FF", color="#8B5CF6", fontcolor="#3B0764"];
+query [label="Query age t + feature ID d\nArbitrary, irregular times", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+context [label="Fixed prefix + query context\ncₜd = [s, H₀, t, e_d]", fillcolor="#EEF2FF", color="#6366F1", fontcolor="#312E81"];
+prior [label="Multi-output GP prior\nf ∼ GP(mθ, kθ)\nLearned mean + PSD cross-feature kernel", fillcolor="#ECFEFF", color="#06B6D4", fontcolor="#164E63"];
+observed [label="Available measurements D\nIrregular (t, d, y) records", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+transform [label="Forward observation flow\ng = Tθ(y; c), with log |J_T|\nNetwork predicts invertible flow parameters", fillcolor="#FFF7ED", color="#F59E0B", fontcolor="#78350F"];
+posterior [label="Exact Gaussian conditioning\np(g* | Tθ(D)), covariance K + Σ\ng = f + εG in Gaussian space", fillcolor="#ECFEFF", color="#06B6D4", fontcolor="#164E63"];
+inverse [label="Inverse observation flow\ny* = Tθ⁻¹(g*; c*)", fillcolor="#FFF7ED", color="#F59E0B", fontcolor="#78350F"];
+output [label="Return clinical units\nAsymmetric densities / tail shapes\nMean / quantiles / joint samples", fillcolor="#ECFDF5", color="#10B981", fontcolor="#064E3B"];
+loss [label="Train: exact change-of-variables NLL\n−log N(Tθ(y); m, K + Σ) − log |J_T|", fillcolor="#FFF1F2", color="#F43F5E", fontcolor="#881337"];
+{rank=same; output; loss;}
+past -> encoder [];
+baseline -> context [];
+encoder -> context [];
+query -> context [];
+context -> prior [];
+observed -> transform [];
+context -> transform [label="Condition flow parameters"];
+transform -> posterior [label="Transformed measurements"];
+prior -> posterior [label="Gaussian-space mean / kernel + noise"];
+posterior -> inverse [label="Joint Gaussian-space draws g*"];
+context -> inverse [label="Same invertible flow at query"];
+inverse -> output [label="Undo training standardisation"];
+transform -> loss [style=dashed,style=dashed,constraint=false,color="#e11d48"];
+prior -> loss [style=dashed,style=dashed,constraint=false,color="#e11d48"];
+}

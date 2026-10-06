@@ -1,0 +1,66 @@
+flowchart TB
+  accTitle: TPP-C&#58; shared/private feature flow → marked timing predictions
+  accDescr: TPP-C&#58; shared/private feature flow → marked timing predictions&#59; arrows follow causal inputs to predictions and likelihood contributions.
+  past["Past observed snapshots + gaps Available history only"]
+  class past input
+  encoder["Two causal Transformer summaries Feature state H^x&#59; timing state H^τ"]
+  class encoder history
+  phys["Current observed physiology x_n&#58; BP, glucose, creatinine"]
+  class phys input
+  other["Current context q_n Baseline + dynamic covariates Age, masks, staleness, prior mark"]
+  class other input
+  feature_flow["Invertible feature flow z_n^x = F_x&#40;x_n&#59; H^x&#41;"]
+  class feature_flow flow
+  split["Partition complete feature latent z_n^x = &#40;u_n, r_n&#41;"]
+  class split latent
+  shared["Shared coordinates u_n Current timing / mark input"]
+  class shared latent
+  private["Private coordinates r_n Retained for density + inversion"]
+  class private private
+  context["Timing / mark context c_n^C = &#91;u_n, q_n, H_n^τ&#93; No direct current r_n input"]
+  class context context
+  feature_loss["Full feature-snapshot log density log φ_3&#40;&#91;u_n,r_n&#93;&#41; + log &#124;det J_Fx&#124; Added to event + censoring terms"]
+  class feature_loss loss
+  heads["Conditioning network Mark logits + flow parameters"]
+  class heads context
+  marks["Mark probabilities π_k = P&#40;m = k &#124; c_n&#41;"]
+  class marks output
+  timing["One timing flow per mark z = F_τ,k&#40;τ&#59; c_n&#41; f_k&#40;τ&#41;, S_k&#40;τ&#41;"]
+  class timing flow
+  joint["Joint next-event prediction p&#40;τ, m=k &#124; c_n&#41; = π_k f_k&#40;τ&#41;"]
+  class joint output
+  mixture["Forecast when the mark is unknown f&#40;τ&#41; = Σ_k π_k f_k&#40;τ&#41; S&#40;τ&#41; = Σ_k π_k S_k&#40;τ&#41;"]
+  class mixture output
+  event_loss["Observed visit &#40;τ, m&#41; log π_m + log f_m&#40;τ&#41;"]
+  class event_loss loss
+  censor_loss["Right-censored wait c log S&#40;c&#41; = log Σ_k π_k S_k&#40;c&#41;"]
+  class censor_loss loss
+  past --> encoder
+  phys --> feature_flow
+  encoder -->|feature-history state| feature_flow
+  feature_flow --> split
+  split --> shared
+  split --> private
+  shared --> context
+  other --> context
+  encoder -->|timing-history state| context
+  shared --> feature_loss
+  private --> feature_loss
+  feature_flow -->|full flow Jacobian| feature_loss
+  context --> heads
+  heads --> marks
+  heads --> timing
+  marks --> joint
+  timing --> joint
+  joint -->|sum over marks| mixture
+  joint -->|known mark| event_loss
+  mixture -->|no next mark observed| censor_loss
+classDef input fill:#EFF6FF,stroke:#3B82F6,color:#172554
+classDef history fill:#F3E8FF,stroke:#8B5CF6,color:#3B0764
+classDef flow fill:#FFF7ED,stroke:#F59E0B,color:#78350F
+classDef latent fill:#ECFEFF,stroke:#06B6D4,color:#164E63
+classDef context fill:#EEF2FF,stroke:#6366F1,color:#312E81
+classDef output fill:#ECFDF5,stroke:#10B981,color:#064E3B
+classDef loss fill:#FFF1F2,stroke:#F43F5E,color:#881337
+classDef private fill:#F1F5F9,stroke:#64748B,color:#334155
+%% portable-canonical-v2:eyJhY2Nlc3NpYmlsaXR5IjoiVFBQLUM6IHNoYXJlZC9wcml2YXRlIGZlYXR1cmUgZmxvdyDihpIgbWFya2VkIHRpbWluZyBwcmVkaWN0aW9uczsgYXJyb3dzIGZvbGxvdyBjYXVzYWwgaW5wdXRzIHRvIHByZWRpY3Rpb25zIGFuZCBsaWtlbGlob29kIGNvbnRyaWJ1dGlvbnMuIiwiZGF0YSI6eyJkaXJlY3Rpb24iOiJUQiIsImVkZ2VzIjpbeyJhcnJvdyI6Ii0tPiIsImZyb20iOiJwYXN0IiwidG8iOiJlbmNvZGVyIn0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJwaHlzIiwidG8iOiJmZWF0dXJlX2Zsb3cifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6ImVuY29kZXIiLCJsYWJlbCI6ImZlYXR1cmUtaGlzdG9yeSBzdGF0ZSIsInRvIjoiZmVhdHVyZV9mbG93In0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJmZWF0dXJlX2Zsb3ciLCJ0byI6InNwbGl0In0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJzcGxpdCIsInRvIjoic2hhcmVkIn0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJzcGxpdCIsInRvIjoicHJpdmF0ZSJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoic2hhcmVkIiwidG8iOiJjb250ZXh0In0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJvdGhlciIsInRvIjoiY29udGV4dCJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoiZW5jb2RlciIsImxhYmVsIjoidGltaW5nLWhpc3Rvcnkgc3RhdGUiLCJ0byI6ImNvbnRleHQifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6InNoYXJlZCIsInRvIjoiZmVhdHVyZV9sb3NzIn0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJwcml2YXRlIiwidG8iOiJmZWF0dXJlX2xvc3MifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6ImZlYXR1cmVfZmxvdyIsImxhYmVsIjoiZnVsbCBmbG93IEphY29iaWFuIiwidG8iOiJmZWF0dXJlX2xvc3MifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6ImNvbnRleHQiLCJ0byI6ImhlYWRzIn0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJoZWFkcyIsInRvIjoibWFya3MifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6ImhlYWRzIiwidG8iOiJ0aW1pbmcifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6Im1hcmtzIiwidG8iOiJqb2ludCJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoidGltaW5nIiwidG8iOiJqb2ludCJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoiam9pbnQiLCJsYWJlbCI6InN1bSBvdmVyIG1hcmtzIiwidG8iOiJtaXh0dXJlIn0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJqb2ludCIsImxhYmVsIjoia25vd24gbWFyayIsInRvIjoiZXZlbnRfbG9zcyJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoibWl4dHVyZSIsImxhYmVsIjoibm8gbmV4dCBtYXJrIG9ic2VydmVkIiwidG8iOiJjZW5zb3JfbG9zcyJ9XSwibm9kZXMiOlt7ImNsYXNzIjoiaW5wdXQiLCJpZCI6InBhc3QiLCJsYWJlbCI6IlBhc3Qgb2JzZXJ2ZWQgc25hcHNob3RzICsgZ2Fwc1xuQXZhaWxhYmxlIGhpc3Rvcnkgb25seSJ9LHsiY2xhc3MiOiJoaXN0b3J5IiwiaWQiOiJlbmNvZGVyIiwibGFiZWwiOiJUd28gY2F1c2FsIFRyYW5zZm9ybWVyIHN1bW1hcmllc1xuRmVhdHVyZSBzdGF0ZSBIXng7IHRpbWluZyBzdGF0ZSBIXs-EIn0seyJjbGFzcyI6ImlucHV0IiwiaWQiOiJwaHlzIiwibGFiZWwiOiJDdXJyZW50IG9ic2VydmVkIHBoeXNpb2xvZ3lcbnhfbjogQlAsIGdsdWNvc2UsIGNyZWF0aW5pbmUifSx7ImNsYXNzIjoiaW5wdXQiLCJpZCI6Im90aGVyIiwibGFiZWwiOiJDdXJyZW50IGNvbnRleHQgcV9uXG5CYXNlbGluZSArIGR5bmFtaWMgY292YXJpYXRlc1xuQWdlLCBtYXNrcywgc3RhbGVuZXNzLCBwcmlvciBtYXJrIn0seyJjbGFzcyI6ImZsb3ciLCJpZCI6ImZlYXR1cmVfZmxvdyIsImxhYmVsIjoiSW52ZXJ0aWJsZSBmZWF0dXJlIGZsb3dcbnpfbl54ID0gRl94KHhfbjsgSF54KSJ9LHsiY2xhc3MiOiJsYXRlbnQiLCJpZCI6InNwbGl0IiwibGFiZWwiOiJQYXJ0aXRpb24gY29tcGxldGUgZmVhdHVyZSBsYXRlbnRcbnpfbl54ID0gKHVfbiwgcl9uKSJ9LHsiY2xhc3MiOiJsYXRlbnQiLCJpZCI6InNoYXJlZCIsImxhYmVsIjoiU2hhcmVkIGNvb3JkaW5hdGVzIHVfblxuQ3VycmVudCB0aW1pbmcgLyBtYXJrIGlucHV0In0seyJjbGFzcyI6InByaXZhdGUiLCJpZCI6InByaXZhdGUiLCJsYWJlbCI6IlByaXZhdGUgY29vcmRpbmF0ZXMgcl9uXG5SZXRhaW5lZCBmb3IgZGVuc2l0eSArIGludmVyc2lvbiJ9LHsiY2xhc3MiOiJjb250ZXh0IiwiaWQiOiJjb250ZXh0IiwibGFiZWwiOiJUaW1pbmcgLyBtYXJrIGNvbnRleHRcbmNfbl5DID0gW3VfbiwgcV9uLCBIX25ez4RdXG5ObyBkaXJlY3QgY3VycmVudCByX24gaW5wdXQifSx7ImNsYXNzIjoibG9zcyIsImlkIjoiZmVhdHVyZV9sb3NzIiwibGFiZWwiOiJGdWxsIGZlYXR1cmUtc25hcHNob3QgbG9nIGRlbnNpdHlcbmxvZyDPhl8zKFt1X24scl9uXSkgKyBsb2cgfGRldCBKX0Z4fFxuQWRkZWQgdG8gZXZlbnQgKyBjZW5zb3JpbmcgdGVybXMifSx7ImNsYXNzIjoiY29udGV4dCIsImlkIjoiaGVhZHMiLCJsYWJlbCI6IkNvbmRpdGlvbmluZyBuZXR3b3JrXG5NYXJrIGxvZ2l0cyArIGZsb3cgcGFyYW1ldGVycyJ9LHsiY2xhc3MiOiJvdXRwdXQiLCJpZCI6Im1hcmtzIiwibGFiZWwiOiJNYXJrIHByb2JhYmlsaXRpZXNcbs-AX2sgPSBQKG0gPSBrIHwgY19uKSJ9LHsiY2xhc3MiOiJmbG93IiwiaWQiOiJ0aW1pbmciLCJsYWJlbCI6Ik9uZSB0aW1pbmcgZmxvdyBwZXIgbWFya1xueiA9IEZfz4QsayjPhDsgY19uKVxuZl9rKM-EKSwgU19rKM-EKSJ9LHsiY2xhc3MiOiJvdXRwdXQiLCJpZCI6ImpvaW50IiwibGFiZWwiOiJKb2ludCBuZXh0LWV2ZW50IHByZWRpY3Rpb25cbnAoz4QsIG09ayB8IGNfbikgPSDPgF9rIGZfayjPhCkifSx7ImNsYXNzIjoib3V0cHV0IiwiaWQiOiJtaXh0dXJlIiwibGFiZWwiOiJGb3JlY2FzdCB3aGVuIHRoZSBtYXJrIGlzIHVua25vd25cbmYoz4QpID0gzqNfayDPgF9rIGZfayjPhClcblMoz4QpID0gzqNfayDPgF9rIFNfayjPhCkifSx7ImNsYXNzIjoibG9zcyIsImlkIjoiZXZlbnRfbG9zcyIsImxhYmVsIjoiT2JzZXJ2ZWQgdmlzaXQgKM-ELCBtKVxubG9nIM-AX20gKyBsb2cgZl9tKM-EKSJ9LHsiY2xhc3MiOiJsb3NzIiwiaWQiOiJjZW5zb3JfbG9zcyIsImxhYmVsIjoiUmlnaHQtY2Vuc29yZWQgd2FpdCBjXG5sb2cgUyhjKSA9IGxvZyDOo19rIM-AX2sgU19rKGMpIn1dfSwiZGVzY3JpcHRpb24iOm51bGwsImlkIjoidHBwX2MiLCJraW5kIjoiZmxvd2NoYXJ0Iiwic291cmNlU2hhMjU2IjoiYWNmNGRjNzNmNTRlZmJlN2M0MzNlOWIyNmQ4N2UzNjYwZDE4NGZkOWMwZWMyOGJiN2EwYjdiMGE2ZmE4ODFmOCIsInN0eWxlcyI6W3siZGVmaW5pdGlvbiI6ImZpbGw6I0VGRjZGRixzdHJva2U6IzNCODJGNixjb2xvcjojMTcyNTU0IiwibmFtZSI6ImlucHV0In0seyJkZWZpbml0aW9uIjoiZmlsbDojRjNFOEZGLHN0cm9rZTojOEI1Q0Y2LGNvbG9yOiMzQjA3NjQiLCJuYW1lIjoiaGlzdG9yeSJ9LHsiZGVmaW5pdGlvbiI6ImZpbGw6I0ZGRjdFRCxzdHJva2U6I0Y1OUUwQixjb2xvcjojNzgzNTBGIiwibmFtZSI6ImZsb3cifSx7ImRlZmluaXRpb24iOiJmaWxsOiNFQ0ZFRkYsc3Ryb2tlOiMwNkI2RDQsY29sb3I6IzE2NEU2MyIsIm5hbWUiOiJsYXRlbnQifSx7ImRlZmluaXRpb24iOiJmaWxsOiNFRUYyRkYsc3Ryb2tlOiM2MzY2RjEsY29sb3I6IzMxMkU4MSIsIm5hbWUiOiJjb250ZXh0In0seyJkZWZpbml0aW9uIjoiZmlsbDojRUNGREY1LHN0cm9rZTojMTBCOTgxLGNvbG9yOiMwNjRFM0IiLCJuYW1lIjoib3V0cHV0In0seyJkZWZpbml0aW9uIjoiZmlsbDojRkZGMUYyLHN0cm9rZTojRjQzRjVFLGNvbG9yOiM4ODEzMzciLCJuYW1lIjoibG9zcyJ9LHsiZGVmaW5pdGlvbiI6ImZpbGw6I0YxRjVGOSxzdHJva2U6IzY0NzQ4Qixjb2xvcjojMzM0MTU1IiwibmFtZSI6InByaXZhdGUifV0sInRpdGxlIjoiVFBQLUM6IHNoYXJlZC9wcml2YXRlIGZlYXR1cmUgZmxvdyDihpIgbWFya2VkIHRpbWluZyBwcmVkaWN0aW9ucyIsInZlcnNpb24iOjF9

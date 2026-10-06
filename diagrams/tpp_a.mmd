@@ -1,0 +1,45 @@
+flowchart TB
+  accTitle: TPP-A&#58; baseline context → marked timing predictions
+  accDescr: TPP-A&#58; baseline context → marked timing predictions&#59; arrows follow causal inputs to predictions and likelihood contributions.
+  baseline["Fixed patient baseline s&#58; entry context / covariates"]
+  class baseline input
+  past["Previous observed IATs τ_1, …, τ_n"]
+  class past input
+  encoder["Causal Transformer H_n^τ = E&#40;τ_1&#58;n&#41;"]
+  class encoder history
+  context["Timing / mark context c_n^A = &#91;s, H_n^τ&#93;"]
+  class context context
+  heads["Conditioning network Mark logits + flow parameters"]
+  class heads context
+  marks["Mark probabilities π_k = P&#40;m = k &#124; c_n&#41;"]
+  class marks output
+  timing["One timing flow per mark z = F_τ,k&#40;τ&#59; c_n&#41; f_k&#40;τ&#41;, S_k&#40;τ&#41;"]
+  class timing flow
+  joint["Joint next-event prediction p&#40;τ, m=k &#124; c_n&#41; = π_k f_k&#40;τ&#41;"]
+  class joint output
+  mixture["Forecast when the mark is unknown f&#40;τ&#41; = Σ_k π_k f_k&#40;τ&#41; S&#40;τ&#41; = Σ_k π_k S_k&#40;τ&#41;"]
+  class mixture output
+  event_loss["Observed visit &#40;τ, m&#41; log π_m + log f_m&#40;τ&#41;"]
+  class event_loss loss
+  censor_loss["Right-censored wait c log S&#40;c&#41; = log Σ_k π_k S_k&#40;c&#41;"]
+  class censor_loss loss
+  past --> encoder
+  baseline --> context
+  encoder --> context
+  context --> heads
+  heads --> marks
+  heads --> timing
+  marks --> joint
+  timing --> joint
+  joint -->|sum over marks| mixture
+  joint -->|known mark| event_loss
+  mixture -->|no next mark observed| censor_loss
+classDef input fill:#EFF6FF,stroke:#3B82F6,color:#172554
+classDef history fill:#F3E8FF,stroke:#8B5CF6,color:#3B0764
+classDef flow fill:#FFF7ED,stroke:#F59E0B,color:#78350F
+classDef latent fill:#ECFEFF,stroke:#06B6D4,color:#164E63
+classDef context fill:#EEF2FF,stroke:#6366F1,color:#312E81
+classDef output fill:#ECFDF5,stroke:#10B981,color:#064E3B
+classDef loss fill:#FFF1F2,stroke:#F43F5E,color:#881337
+classDef private fill:#F1F5F9,stroke:#64748B,color:#334155
+%% portable-canonical-v2:eyJhY2Nlc3NpYmlsaXR5IjoiVFBQLUE6IGJhc2VsaW5lIGNvbnRleHQg4oaSIG1hcmtlZCB0aW1pbmcgcHJlZGljdGlvbnM7IGFycm93cyBmb2xsb3cgY2F1c2FsIGlucHV0cyB0byBwcmVkaWN0aW9ucyBhbmQgbGlrZWxpaG9vZCBjb250cmlidXRpb25zLiIsImRhdGEiOnsiZGlyZWN0aW9uIjoiVEIiLCJlZGdlcyI6W3siYXJyb3ciOiItLT4iLCJmcm9tIjoicGFzdCIsInRvIjoiZW5jb2RlciJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoiYmFzZWxpbmUiLCJ0byI6ImNvbnRleHQifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6ImVuY29kZXIiLCJ0byI6ImNvbnRleHQifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6ImNvbnRleHQiLCJ0byI6ImhlYWRzIn0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJoZWFkcyIsInRvIjoibWFya3MifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6ImhlYWRzIiwidG8iOiJ0aW1pbmcifSx7ImFycm93IjoiLS0-IiwiZnJvbSI6Im1hcmtzIiwidG8iOiJqb2ludCJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoidGltaW5nIiwidG8iOiJqb2ludCJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoiam9pbnQiLCJsYWJlbCI6InN1bSBvdmVyIG1hcmtzIiwidG8iOiJtaXh0dXJlIn0seyJhcnJvdyI6Ii0tPiIsImZyb20iOiJqb2ludCIsImxhYmVsIjoia25vd24gbWFyayIsInRvIjoiZXZlbnRfbG9zcyJ9LHsiYXJyb3ciOiItLT4iLCJmcm9tIjoibWl4dHVyZSIsImxhYmVsIjoibm8gbmV4dCBtYXJrIG9ic2VydmVkIiwidG8iOiJjZW5zb3JfbG9zcyJ9XSwibm9kZXMiOlt7ImNsYXNzIjoiaW5wdXQiLCJpZCI6ImJhc2VsaW5lIiwibGFiZWwiOiJGaXhlZCBwYXRpZW50IGJhc2VsaW5lXG5zOiBlbnRyeSBjb250ZXh0IC8gY292YXJpYXRlcyJ9LHsiY2xhc3MiOiJpbnB1dCIsImlkIjoicGFzdCIsImxhYmVsIjoiUHJldmlvdXMgb2JzZXJ2ZWQgSUFUc1xuz4RfMSwg4oCmLCDPhF9uIn0seyJjbGFzcyI6Imhpc3RvcnkiLCJpZCI6ImVuY29kZXIiLCJsYWJlbCI6IkNhdXNhbCBUcmFuc2Zvcm1lclxuSF9uXs-EID0gRSjPhF8xOm4pIn0seyJjbGFzcyI6ImNvbnRleHQiLCJpZCI6ImNvbnRleHQiLCJsYWJlbCI6IlRpbWluZyAvIG1hcmsgY29udGV4dFxuY19uXkEgPSBbcywgSF9uXs-EXSJ9LHsiY2xhc3MiOiJjb250ZXh0IiwiaWQiOiJoZWFkcyIsImxhYmVsIjoiQ29uZGl0aW9uaW5nIG5ldHdvcmtcbk1hcmsgbG9naXRzICsgZmxvdyBwYXJhbWV0ZXJzIn0seyJjbGFzcyI6Im91dHB1dCIsImlkIjoibWFya3MiLCJsYWJlbCI6Ik1hcmsgcHJvYmFiaWxpdGllc1xuz4BfayA9IFAobSA9IGsgfCBjX24pIn0seyJjbGFzcyI6ImZsb3ciLCJpZCI6InRpbWluZyIsImxhYmVsIjoiT25lIHRpbWluZyBmbG93IHBlciBtYXJrXG56ID0gRl_PhCxrKM-EOyBjX24pXG5mX2soz4QpLCBTX2soz4QpIn0seyJjbGFzcyI6Im91dHB1dCIsImlkIjoiam9pbnQiLCJsYWJlbCI6IkpvaW50IG5leHQtZXZlbnQgcHJlZGljdGlvblxucCjPhCwgbT1rIHwgY19uKSA9IM-AX2sgZl9rKM-EKSJ9LHsiY2xhc3MiOiJvdXRwdXQiLCJpZCI6Im1peHR1cmUiLCJsYWJlbCI6IkZvcmVjYXN0IHdoZW4gdGhlIG1hcmsgaXMgdW5rbm93blxuZijPhCkgPSDOo19rIM-AX2sgZl9rKM-EKVxuUyjPhCkgPSDOo19rIM-AX2sgU19rKM-EKSJ9LHsiY2xhc3MiOiJsb3NzIiwiaWQiOiJldmVudF9sb3NzIiwibGFiZWwiOiJPYnNlcnZlZCB2aXNpdCAoz4QsIG0pXG5sb2cgz4BfbSArIGxvZyBmX20oz4QpIn0seyJjbGFzcyI6Imxvc3MiLCJpZCI6ImNlbnNvcl9sb3NzIiwibGFiZWwiOiJSaWdodC1jZW5zb3JlZCB3YWl0IGNcbmxvZyBTKGMpID0gbG9nIM6jX2sgz4BfayBTX2soYykifV19LCJkZXNjcmlwdGlvbiI6bnVsbCwiaWQiOiJ0cHBfYSIsImtpbmQiOiJmbG93Y2hhcnQiLCJzb3VyY2VTaGEyNTYiOiJlNTUzZGU3Yjg4YjI0YWJjZjhjYmE5MzAxNzdmY2YyMzY3M2RkYzAwNWJiYmI5M2EwN2RhNTZjYmExODhhNWZkIiwic3R5bGVzIjpbeyJkZWZpbml0aW9uIjoiZmlsbDojRUZGNkZGLHN0cm9rZTojM0I4MkY2LGNvbG9yOiMxNzI1NTQiLCJuYW1lIjoiaW5wdXQifSx7ImRlZmluaXRpb24iOiJmaWxsOiNGM0U4RkYsc3Ryb2tlOiM4QjVDRjYsY29sb3I6IzNCMDc2NCIsIm5hbWUiOiJoaXN0b3J5In0seyJkZWZpbml0aW9uIjoiZmlsbDojRkZGN0VELHN0cm9rZTojRjU5RTBCLGNvbG9yOiM3ODM1MEYiLCJuYW1lIjoiZmxvdyJ9LHsiZGVmaW5pdGlvbiI6ImZpbGw6I0VDRkVGRixzdHJva2U6IzA2QjZENCxjb2xvcjojMTY0RTYzIiwibmFtZSI6ImxhdGVudCJ9LHsiZGVmaW5pdGlvbiI6ImZpbGw6I0VFRjJGRixzdHJva2U6IzYzNjZGMSxjb2xvcjojMzEyRTgxIiwibmFtZSI6ImNvbnRleHQifSx7ImRlZmluaXRpb24iOiJmaWxsOiNFQ0ZERjUsc3Ryb2tlOiMxMEI5ODEsY29sb3I6IzA2NEUzQiIsIm5hbWUiOiJvdXRwdXQifSx7ImRlZmluaXRpb24iOiJmaWxsOiNGRkYxRjIsc3Ryb2tlOiNGNDNGNUUsY29sb3I6Izg4MTMzNyIsIm5hbWUiOiJsb3NzIn0seyJkZWZpbml0aW9uIjoiZmlsbDojRjFGNUY5LHN0cm9rZTojNjQ3NDhCLGNvbG9yOiMzMzQxNTUiLCJuYW1lIjoicHJpdmF0ZSJ9XSwidGl0bGUiOiJUUFAtQTogYmFzZWxpbmUgY29udGV4dCDihpIgbWFya2VkIHRpbWluZyBwcmVkaWN0aW9ucyIsInZlcnNpb24iOjF9

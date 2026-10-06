@@ -1,0 +1,39 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.35", ranksep="0.55", splines=polyline, fontname="Segoe UI", fontsize=21, fontcolor="#0f172a", labelloc=t, label="TPP-B: dynamic feature flow → marked timing predictions"];
+node [shape=box, style="rounded,filled", fontname="Segoe UI", fontsize=15, margin="0.18,0.13", penwidth=1.3];
+edge [color="#64748b", penwidth=1.35, arrowsize=0.75, fontname="Segoe UI", fontsize=11, fontcolor="#475569"];
+past [label="Past observed snapshots + gaps\nAvailable history only", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+encoder [label="Two causal Transformer summaries\nFeature state H^x; timing state H^τ", fillcolor="#F3E8FF", color="#8B5CF6", fontcolor="#3B0764"];
+phys [label="Current observed physiology\nx_n: BP, glucose, creatinine", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+other [label="Current context q_n\nBaseline + dynamic covariates\nAge, masks, staleness, prior mark", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+feature_flow [label="Invertible feature flow\nz_n^x = F_x(x_n; H^x)", fillcolor="#FFF7ED", color="#F59E0B", fontcolor="#78350F"];
+latent [label="All current feature latents\nz_n^x", fillcolor="#ECFEFF", color="#06B6D4", fontcolor="#164E63"];
+context [label="Timing / mark context\nc_n^B = [z_n^x, q_n, H_n^τ]", fillcolor="#EEF2FF", color="#6366F1", fontcolor="#312E81"];
+feature_loss [label="Feature-snapshot log density\nlog φ_3(z_n^x) + log |det J_Fx|\nAdded to event + censoring terms", fillcolor="#FFF1F2", color="#F43F5E", fontcolor="#881337"];
+heads [label="Conditioning network\nMark logits + flow parameters", fillcolor="#EEF2FF", color="#6366F1", fontcolor="#312E81"];
+marks [label="Mark probabilities\nπ_k = P(m = k | c_n)", fillcolor="#ECFDF5", color="#10B981", fontcolor="#064E3B"];
+timing [label="One timing flow per mark\nz = F_τ,k(τ; c_n)\nf_k(τ), S_k(τ)", fillcolor="#FFF7ED", color="#F59E0B", fontcolor="#78350F"];
+joint [label="Joint next-event prediction\np(τ, m=k | c_n) = π_k f_k(τ)", fillcolor="#ECFDF5", color="#10B981", fontcolor="#064E3B"];
+mixture [label="Forecast when the mark is unknown\nf(τ) = Σ_k π_k f_k(τ)\nS(τ) = Σ_k π_k S_k(τ)", fillcolor="#ECFDF5", color="#10B981", fontcolor="#064E3B"];
+event_loss [label="Observed visit (τ, m)\nlog π_m + log f_m(τ)", fillcolor="#FFF1F2", color="#F43F5E", fontcolor="#881337"];
+censor_loss [label="Right-censored wait c\nlog S(c) = log Σ_k π_k S_k(c)", fillcolor="#FFF1F2", color="#F43F5E", fontcolor="#881337"];
+{rank=same; marks; timing;}
+{rank=same; event_loss; censor_loss; feature_loss;}
+past -> encoder [];
+phys -> feature_flow [];
+encoder -> feature_flow [label="feature-history state"];
+feature_flow -> latent [];
+latent -> context [];
+other -> context [];
+encoder -> context [label="timing-history state"];
+feature_flow -> feature_loss [label="full flow Jacobian",style=dashed,constraint=false,color="#e11d48"];
+latent -> feature_loss [style=dashed,constraint=false,color="#e11d48"];
+context -> heads [];
+heads -> marks [];
+heads -> timing [];
+marks -> joint [];
+timing -> joint [];
+joint -> mixture [label="sum over marks"];
+joint -> event_loss [label="known mark"];
+mixture -> censor_loss [label="no next mark observed"];
+}

@@ -1,0 +1,29 @@
+digraph G {
+graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.35", ranksep="0.55", splines=polyline, fontname="Segoe UI", fontsize=21, fontcolor="#0f172a", labelloc=t, label="TPP-A: baseline context → marked timing predictions"];
+node [shape=box, style="rounded,filled", fontname="Segoe UI", fontsize=15, margin="0.18,0.13", penwidth=1.3];
+edge [color="#64748b", penwidth=1.35, arrowsize=0.75, fontname="Segoe UI", fontsize=11, fontcolor="#475569"];
+baseline [label="Fixed patient baseline\ns: entry context / covariates", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+past [label="Previous observed IATs\nτ_1, …, τ_n", fillcolor="#EFF6FF", color="#3B82F6", fontcolor="#172554"];
+encoder [label="Causal Transformer\nH_n^τ = E(τ_1:n)", fillcolor="#F3E8FF", color="#8B5CF6", fontcolor="#3B0764"];
+context [label="Timing / mark context\nc_n^A = [s, H_n^τ]", fillcolor="#EEF2FF", color="#6366F1", fontcolor="#312E81"];
+heads [label="Conditioning network\nMark logits + flow parameters", fillcolor="#EEF2FF", color="#6366F1", fontcolor="#312E81"];
+marks [label="Mark probabilities\nπ_k = P(m = k | c_n)", fillcolor="#ECFDF5", color="#10B981", fontcolor="#064E3B"];
+timing [label="One timing flow per mark\nz = F_τ,k(τ; c_n)\nf_k(τ), S_k(τ)", fillcolor="#FFF7ED", color="#F59E0B", fontcolor="#78350F"];
+joint [label="Joint next-event prediction\np(τ, m=k | c_n) = π_k f_k(τ)", fillcolor="#ECFDF5", color="#10B981", fontcolor="#064E3B"];
+mixture [label="Forecast when the mark is unknown\nf(τ) = Σ_k π_k f_k(τ)\nS(τ) = Σ_k π_k S_k(τ)", fillcolor="#ECFDF5", color="#10B981", fontcolor="#064E3B"];
+event_loss [label="Observed visit (τ, m)\nlog π_m + log f_m(τ)", fillcolor="#FFF1F2", color="#F43F5E", fontcolor="#881337"];
+censor_loss [label="Right-censored wait c\nlog S(c) = log Σ_k π_k S_k(c)", fillcolor="#FFF1F2", color="#F43F5E", fontcolor="#881337"];
+{rank=same; marks; timing;}
+{rank=same; event_loss; censor_loss; }
+past -> encoder [];
+baseline -> context [];
+encoder -> context [];
+context -> heads [];
+heads -> marks [];
+heads -> timing [];
+marks -> joint [];
+timing -> joint [];
+joint -> mixture [label="sum over marks"];
+joint -> event_loss [label="known mark"];
+mixture -> censor_loss [label="no next mark observed"];
+}
